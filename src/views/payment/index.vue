@@ -66,11 +66,13 @@
           methods:{
             selectPay(){
               if(this.weipayFlag){
-                  tenpay()
+                  alert("微信")
+                  this.tenpay()
               }else if(this.zhifupayFlag){
-                  ailipay()
+                  alert("支付宝")
+                  this.ailipay()
               }else if(this.isWeiXin()){
-                  jsapipay()
+                  this.jsapipay()
               }
 
             },
