@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import IndexHome from "../views/indexHome"
 import Spell from "../views/spell"
 import Assemble from "../views/Assemble"
+import Payment from "../views/payment"
 // import axios from 'axios';
 // var vm = new Vue({el:"#index"});
 // Vue.prototype.$httpAxios = axios;
@@ -28,6 +29,12 @@ export default new Router({
       path: '/ass',
       name: 'spell',
       component: Assemble,
+
+    },
+    {
+      path: '/payment',
+      name: 'Payment',
+      component: Payment,
 
     },
   ]
