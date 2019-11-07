@@ -6,7 +6,8 @@
                 <div>鲸小爱口语课</div>
                 <div>
                   <span>天数</span>
-                  <select id="0" v-model="SelectVal" ref="selectDom" @change="handlerSelect($event)" >
+                  <select id="0" v-model="ZERO" ref="selectDom" @change="handlerSelect($event)" >
+                    <option value="0">0</option>
                     <option value="30">{{monthly}}</option>
                     <option value="180">{{halfAYear}}</option>
                     <option value="360">{{year}}</option>
@@ -29,7 +30,8 @@
                 <div>雅思备考计划</div>
                 <div>
                   <span>天数</span>
-                  <select id="0" v-model="ProSelectVal" ref="selectDom" @change="handlerSelectPro($event)" >
+                  <select id="0" v-model="Zero" ref="selectDom" @change="handlerSelectPro($event)" >
+                    <option value="0">0</option>
                     <option value="7">{{Proseven}}</option>
                     <option value="14">{{ProFourteen}}</option>                   
                     <option value="30">{{Promonthly}}</option>
@@ -91,6 +93,8 @@
               collapsed: false,
               platform:"",
               Days:"",
+              ZERO:0,
+              Zero:0,
               ProOriginalPrice:0, //备考计划原价
               ProPresentPrice:0, //备考计划现价
               OriginalPrice:0, //原价
@@ -200,8 +204,8 @@
               var goodsGroupInfo = JSON.stringify(obj)
               data.append("goodsGroupInfo",goodsGroupInfo);
               let redirecturi = "http://" + window.location.host+"/spell";
-              data.append("returnUrl",redirecturi)
-              fetch("http://jztest.jinghangapps.com:5432/v2/aliH5Helper/h5Pay",{
+              // data.append("returnUrl",redirecturi)
+              fetch("http://jztest.jinghangapps.com:5432/v2/wxH5Helper/h5Pay",{
                 method:"post",
                 body:data,
                 mode:"cors",
@@ -211,11 +215,11 @@
               }).then((res)=>{
                 return res.json()
               }).then((res)=>{
-                 console.log(res)
-                //  var url = "http://" + window.location.host+"/spell";
-                //   url = encodeURIComponent(url);
-                //   location.href=res.data.mweb_url + "&redirect_url=" + url;
-                location.href=res.data.url;
+                  console.log(res)
+                  var url = "http://" + window.location.host+"/spell";
+                  url = encodeURIComponent(url);
+                  location.href=res.data.mweb_url + "&redirect_url=" + url;
+                // location.href=res.data.url;
               })
             }
           
