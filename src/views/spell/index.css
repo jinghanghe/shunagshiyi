@@ -1,0 +1,495 @@
+.spellMain{
+  width:100%;
+  height:100%;
+  background:rgba(48,44,80,1);
+  overflow: hidden;
+}
+.language{
+  width:6.88rem;
+  height:3.62rem;
+  background:rgba(255,255,255,1);
+  border-radius:0.16rem;
+  margin: 0 auto;
+  margin-top: 0.18rem;
+  display: flex;
+}
+.languageImg{
+  width:2rem;
+  height:2.64rem;
+  background:rgba(216,216,216,1);
+  border-radius:0.14rem;
+  background-image: url("../../static/口语课@3x.png");
+  background-size: 100% 100%;
+  margin-left: 0.56rem;
+  margin-top: 0.43rem;
+}
+.languageText{
+  margin-left: 1.08rem;
+  margin-top: 0.34rem;
+  width:2.56rem;
+  height:2.78rem;
+}
+.languageText>div:nth-child(1){
+  width:2.16rem;
+  height:0.5rem;
+  font-size:0.36rem;
+  font-family:PingFangSC-Semibold,PingFang SC;
+  font-weight:600;
+  color:rgba(81,81,81,1);
+  line-height:0.5rem;
+  margin-left: 0.4rem;
+  margin-bottom: 0.24rem;
+}
+.languageText>div:nth-child(2){
+  height:0.6rem;
+  overflow: hidden;
+  display: flex;
+}
+.languageText>div:nth-child(2)>span:nth-child(1){
+  width:0.58rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(101,101,101,1);
+  line-height:0.4rem;
+  display: inline-block;
+  margin-top: 0.1rem;
+  margin-right: 0.4rem;
+
+}
+.languageText>div:nth-child(2)>select{
+  width:1.64rem;
+  height:0.6rem;
+  border-radius:0.12rem;
+  border:0.02rem solid rgba(186,186,186,1);
+  padding: 0 2%; 
+  margin: 0;
+  /* appearance:none; */
+  /* -moz-appearance:none; */
+  /* -webkit-appearance:none; */
+  line-height:0.6rem;
+  text-align:center;
+  text-align-last: center;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+
+}
+select::-ms-expand { display: none; }
+.option{
+  text-align: center;
+  outline: none;
+  border:none;
+  background-color: #fff;
+}
+.languageText>div:nth-child(3){
+  height:0.5rem;
+  margin-top: 0.48rem;
+}
+.languageText>div:nth-child(3)>span:nth-of-type(1){
+  display: inline-block;
+  width:0.84rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(112,112,112,1);
+  line-height:0.4rem;
+  /* margin-right: ; */
+
+}
+.languageText>div:nth-child(3)>s:nth-of-type(1){
+  display: inline-block;
+  width:0.64rem;
+  height:0.34rem;
+  font-size:0.24rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(172,172,172,1);
+  line-height:0.34rem;
+
+}
+.languageText>div:nth-child(3)>span:nth-of-type(2){
+  display: inline-block;
+  width:0.8rem;
+  height:0.5rem;
+  font-size:0.36rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,102,108,1);
+  line-height:0.5rem;
+  margin-left: 0.2rem;
+
+}
+.languageText>div:nth-child(4){
+    margin-top:0.04rem;
+
+}
+.languageText>div:nth-child(4)>span{
+  width:1.6rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(145,145,145,1);
+  line-height:0.4rem;
+  float: right;
+  text-align: right;
+}
+
+
+
+.ProFormaPlan{
+  width:6.88rem;
+  height:3.62rem;
+  background:rgba(255,255,255,1);
+  border-radius:0.16rem;
+  margin: 0 auto;
+  margin-top: 0.32rem;
+  display: flex;
+}
+.ProFormaPlanImg{
+  width:2rem;
+  height:2.64rem;
+  background:rgba(216,216,216,1);
+  border-radius:0.14rem;
+  background-image: url("../../static/备考计划@3x.png");
+  background-size: 100% 100%;
+  margin-left: 0.56rem;
+  margin-top: 0.43rem;
+}
+.ProFormaPlanText{
+  margin-left: 1.08rem;
+  margin-top: 0.34rem;
+  width:2.56rem;
+  height:2.78rem;
+}
+.ProFormaPlanText>div:nth-child(1){
+  width:2.16rem;
+  height:0.5rem;
+  font-size:0.36rem;
+  font-family:PingFangSC-Semibold,PingFang SC;
+  font-weight:600;
+  color:rgba(81,81,81,1);
+  line-height:0.5rem;
+  margin-left: 0.4rem;
+  margin-bottom: 0.24rem;
+}
+.ProFormaPlanText>div:nth-child(2){
+  height:0.6rem;
+  overflow: hidden;
+  display: flex;
+}
+.ProFormaPlanText>div:nth-child(2)>span:nth-child(1){
+  width:0.58rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(101,101,101,1);
+  line-height:0.4rem;
+  display: inline-block;
+  margin-top: 0.1rem;
+  margin-right: 0.4rem;
+
+}
+.ProFormaPlanText>div:nth-child(2)>select{
+  width:1.64rem;
+  height:0.6rem;
+  border-radius:0.12rem;
+  border:0.02rem solid rgba(186,186,186,1);
+  padding: 0 2%; 
+  margin: 0;
+  /* appearance:none; */
+  /* -moz-appearance:none; */
+  /* -webkit-appearance:none; */
+  line-height:0.6rem;
+  text-align:center;
+  text-align-last: center;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+
+}
+select::-ms-expand { display: none; }
+.option{
+  text-align: center;
+  outline: none;
+  border:none;
+  background-color: #fff;
+}
+.ProFormaPlanText>div:nth-child(3){
+  height:0.5rem;
+  margin-top: 0.48rem;
+}
+.ProFormaPlanText>div:nth-child(3)>span:nth-of-type(1){
+  display: inline-block;
+  width:0.84rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(112,112,112,1);
+  line-height:0.4rem;
+  /* margin-right: ; */
+
+}
+.ProFormaPlanText>div:nth-child(3)>s:nth-of-type(1){
+  display: inline-block;
+  width:0.64rem;
+  height:0.34rem;
+  font-size:0.24rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(172,172,172,1);
+  line-height:0.34rem;
+
+}
+.ProFormaPlanText>div:nth-child(3)>span:nth-of-type(2){
+  display: inline-block;
+  width:0.8rem;
+  height:0.5rem;
+  font-size:0.36rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,102,108,1);
+  line-height:0.5rem;
+  margin-left: 0.2rem;
+
+}
+.ProFormaPlanText>div:nth-child(4){
+    margin-top:0.04rem;
+
+}
+.ProFormaPlanText>div:nth-child(4)>span{
+  width:1.6rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(145,145,145,1);
+  line-height:0.4rem;
+  float: right;
+  text-align: right;
+}
+
+
+
+.IELTSodeTest{
+  width:6.88rem;
+  height:3.62rem;
+  background:rgba(255,255,255,1);
+  border-radius:0.16rem;
+  margin: 0 auto;
+  margin-top: 0.32rem;
+  display: flex;
+}
+.IELTSodeTestImg{
+  width:2rem;
+  height:2.64rem;
+  background:rgba(216,216,216,1);
+  border-radius:0.14rem;
+  background-image: url("../../static/雅思模考@3x.png");
+  background-size: 100% 100%;
+  margin-left: 0.56rem;
+  margin-top: 0.43rem;
+}
+.IELTSodeTestText{
+  margin-left: 1.08rem;
+  margin-top: 0.34rem;
+  width:2.56rem;
+  height:2.78rem;
+}
+.IELTSodeTestText>div:nth-child(1){
+  width:2.16rem;
+  height:0.5rem;
+  font-size:0.36rem;
+  font-family:PingFangSC-Semibold,PingFang SC;
+  font-weight:600;
+  color:rgba(81,81,81,1);
+  line-height:0.5rem;
+  margin-left: 0.4rem;
+  margin-bottom: 0.24rem;
+}
+.IELTSodeTestText>div:nth-child(2){
+  height:0.6rem;
+  overflow: hidden;
+  display: flex;
+}
+.IELTSodeTestText>div:nth-child(2)>span:nth-child(1){
+  width:0.58rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(101,101,101,1);
+  line-height:0.4rem;
+  display: inline-block;
+  margin-top: 0.1rem;
+  margin-right: 0.22rem;
+
+}
+.IELTSodeTestText>div:nth-child(2)>select{
+  width:1.64rem;
+  height:0.6rem;
+  border-radius:0.12rem;
+  border:0.02rem solid rgba(186,186,186,1);
+  padding: 0 2%; 
+  margin: 0;
+  /* appearance:none; */
+  /* -moz-appearance:none; */
+  /* -webkit-appearance:none; */
+  line-height:0.6rem;
+  text-align:center;
+  text-align-last: center;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+
+}
+select::-ms-expand { display: none; }
+.option{
+  text-align: center;
+  outline: none;
+  border:none;
+  background-color: #fff;
+}
+.IELTSodeTestText>div:nth-child(3){
+  height:0.5rem;
+  margin-top: 0.48rem;
+}
+.IELTSodeTestText>div:nth-child(3)>span:nth-of-type(1){
+  display: inline-block;
+  width:0.84rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(112,112,112,1);
+  line-height:0.4rem;
+  /* margin-right: ; */
+
+}
+.IELTSodeTestText>div:nth-child(3)>s:nth-of-type(1){
+  display: inline-block;
+  width:0.64rem;
+  height:0.34rem;
+  font-size:0.24rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(172,172,172,1);
+  line-height:0.34rem;
+
+}
+.IELTSodeTestText>div:nth-child(3)>span:nth-of-type(2){
+  display: inline-block;
+  width:0.8rem;
+  height:0.5rem;
+  font-size:0.36rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,102,108,1);
+  line-height:0.5rem;
+  margin-left: 0.2rem;
+
+}
+.IELTSodeTestText>div:nth-child(4){
+    margin-top:0.04rem;
+
+}
+.IELTSodeTestText>div:nth-child(4)>span{
+  width:1.6rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(145,145,145,1);
+  line-height:0.4rem;
+  float: right;
+  text-align: right;
+}
+.spellBottom{
+  position: fixed;
+  left:0;
+  bottom:0;
+  background-color: rgba(0,0,0,1);
+  width:100%;
+  height:1rem;
+  display: flex;
+  overflow: hidden;
+}
+.spellBottom>div:nth-child(1){
+  width:70%;
+  height:1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.spellBottom>div:nth-child(1)>s{
+  width:0.9rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(98,98,98,1);
+  line-height:0.4rem;
+  margin-left: 0.44rem;
+  margin-top: 0.32rem;
+  display: inline-block;
+}
+.spellBottom>div:nth-child(1)>p{
+  width:2rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(239,221,188,1);
+  line-height:0.4rem;
+  margin-left: 0.44rem;
+  margin-top: 0.32rem;
+  display: inline-block;
+}
+.spellBottom>div:nth-child(1)>p>span{
+  font-size:0.44rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(239,221,188,1);
+}
+.spellBottom>div:nth-child(2){
+  width:30%;
+  height:1rem;
+  background-color: rgba(255,102,108,1);
+  font-size:0.36rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 1rem;
+}
+.taximeter{
+  width:2rem;
+  height:0.56rem;
+  border-radius:0.12rem 0.12rem 0.12rem 0.12rem;
+  border:1px solid rgba(186,186,186,1);
+  display: flex;
+}
+.taximeter>div:nth-child(1){
+  width:0.6rem;
+  height:0.56rem;
+  border-radius:0.12rem 0 0 0.12rem;
+  border-right:0.02rem solid rgba(186,186,186,1);
+  text-align: center;
+  line-height: 0.6rem;
+}
+.taximeter>div:nth-child(2){
+  width:0.8rem;
+  height:0.6rem;
+  border-right:0.02rem solid rgba(186,186,186,1);
+  text-align: center;
+  line-height: 0.6rem;
+}
+.taximeter>div:nth-child(3){
+  width:0.6rem;
+  height:0.6rem;
+  text-align: center;
+  line-height: 0.6rem;
+  /* border-radius:0px 6px 6px 0px; */
+  /* border:1px solid rgba(186,186,186,1); */
+}

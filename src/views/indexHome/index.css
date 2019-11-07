@@ -1,0 +1,182 @@
+.Img1{
+  width:100%;
+  height:5rem;
+  background-image: url("../../static/详情01@3x.png");
+  background-size: 100% 100%;
+}
+.Img2{
+  width:100%;
+  height:4.66rem;
+  background-image: url("../../static/详情02@3x.png");
+  background-size: 100% 100%;
+}
+.Img3{
+  width:100%;
+  height:3.84rem;
+  background-image: url("../../static/详情03@3x.png");
+  background-size: 100% 100%;
+}
+.Img4{
+  width:100%;
+  height:4.14rem;
+  background-image: url("../../static/详情04@3x.png");
+  background-size: 100% 100%;
+}
+.Img5{
+  width:100%;
+  height:3.58rem;
+  background-image: url("../../static/详情05@3x.png");
+  background-size: 100% 100%;
+}
+.Img6{
+  width:100%;
+  height:3.94rem;
+  background-image: url("../../static/详情06@3x.png");
+  background-size: 100% 100%;
+}
+.Img7{
+  width:100%;
+  height:3.52rem;
+  background-image: url("../../static/详情07@3x.png");
+  background-size: 100% 100%;
+}
+.Img8{
+  width:100%;
+  height:3.92rem;
+  background-image: url("../../static/详情08@3x.png");
+  background-size: 100% 100%;
+}
+.Img9{
+  width:100%;
+  height:3.82rem;
+  background-image: url("../../static/详情09@3x.png");
+  background-size: 100% 100%;
+}
+.Img10{
+  width:100%;
+  height:3.06rem;
+  background-image: url("../../static/详情10@3x.png");
+  background-size: 100% 100%;
+}
+.Img11{
+  width:100%;
+  height:3.92rem;
+  background-image: url("../../static/详情11@3x.png");
+  background-size: 100% 100%;
+}
+.Img12{
+  width:100%;
+  height:4.12rem;
+  background-image: url("../../static/详情12@3x.png");
+  background-size: 100% 100%;
+}
+.Img13{
+  width:100%;
+  height:4.9rem;
+  background-image: url("../../static/详情13@3x.png");
+  background-size: 100% 100%;
+}
+.Img14{
+  width:100%;
+  height:4.44rem;
+  background-image: url("../../static/详情14@3x.png");
+  background-size: 100% 100%;
+}
+.bottom{
+  width:100%;
+  height:2.38rem;
+  background:rgba(83,93,128,1);
+  position: fixed;
+  left:0;
+  bottom:0;
+}
+.spell{
+  width:314px;
+  height:45px;
+  background:rgba(232,204,167,1);
+  border-radius:23px;
+  text-align: center;
+  line-height: 45px;
+  margin-left: 50%;
+  transform:translateX(-50%);
+  margin-top: 0.42rem;
+  /* transform:translateY(50%) */
+}
+.curriculum{
+  display: flex;
+  height:0.34rem;
+  margin-top: 0.36rem;
+}
+.curriculum>div{
+  display: flex;
+}
+.curriculum>div:nth-child(1){
+  margin-left: 0.6rem;
+}
+.curriculum>div:nth-child(1)>span{
+  display:inline-block;
+}
+.curriculum>div:nth-child(1)>span:nth-child(1){
+  background-image: url("../../static/已选中@3x.png");
+  width:0.28rem;
+  height:0.28rem;
+  background-size: 100% 100%;
+  margin-top: 0.04rem;
+  margin-right: 0.14rem;
+}
+.curriculum>div:nth-child(1)>span:nth-child(2){
+  /* width:1.48rem;
+  height:0.34rem; */
+  font-size:0.24rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:0.34rem;
+}
+.curriculum>div:nth-child(2){
+  margin-left: 0.38rem;
+}
+.curriculum>div:nth-child(2)>span{
+  display:inline-block;
+}
+.curriculum>div:nth-child(2)>span:nth-child(1){
+  background-image: url("../../static/已选中@3x.png");
+  width:0.28rem;
+  height:0.28rem;
+  background-size: 100% 100%;
+  margin-top: 0.04rem;
+  margin-right: 0.14rem;
+}
+.curriculum>div:nth-child(2)>span:nth-child(2){
+  /* width:1.48rem;
+  height:0.34rem; */
+  font-size:0.24rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:0.34rem;
+}
+
+.curriculum>div:nth-child(3){
+  margin-left: 0.38rem;
+}
+.curriculum>div:nth-child(3)>span{
+  display:inline-block;
+}
+.curriculum>div:nth-child(3)>span:nth-child(1){
+  background-image: url("../../static/已选中@3x.png");
+  width:0.28rem;
+  height:0.28rem;
+  background-size: 100% 100%;
+  margin-top: 0.04rem;
+  margin-right: 0.24rem;
+}
+.curriculum>div:nth-child(3)>span:nth-child(2){
+  /* width:1.48rem;
+  height:0.34rem; */
+  font-size:0.24rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:0.34rem;
+}
