@@ -10,7 +10,9 @@ Vue.prototype.$axios=axios
 Vue.config.productionTip = false
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-
+import clipboard from 'clipboard';
+//注册到vue原型上
+Vue.prototype.clipboard = clipboard;
 // require styles
 import 'swiper/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
