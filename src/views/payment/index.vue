@@ -102,6 +102,7 @@
             //   this.OralEnglishClass=res.data.goodsArr;
             //   console.log(this.OralEnglishClass);
             // })
+            alert(localStorage.getItem("orderNo"))
             if (!isWeiXin()) {
               if (localStorage.getItem("orderNo")) {
                 this.orderNoFlag = true;
