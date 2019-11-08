@@ -170,7 +170,7 @@
               }else if(this.zhifupayFlag){
                   alert("支付宝")
                   this.ailipay()
-              }else if(this.isWeiXin()){
+              }else if(isWeiXin()){
                   this.showFlag=false
                   this.jsapipay()
               }
