@@ -4,19 +4,19 @@
                 <div></div>
                 <div>鲸小爱口语课</div>
                 <div>{{Oridays}}天</div>
-                <div>￥{{Oriprice}}</div>
+                <div>￥{{Oriprice }}</div>
               </div>
               <div class="Prepare" >
                 <div></div>
                 <div>雅思备考计划</div>
                 <div>{{Prodays}}天</div>
-                <div>￥{{Proprice}}</div>
+                <div>￥{{Proprice }}</div>
               </div>
               <div class="dry" >
                 <div></div>
                 <div>雅思模考</div>
                 <div>{{IELTSTNumber}}个</div>
-                <div>￥{{IELTSTPrice}}</div>
+                <div>￥{{IELTSTPrice /100}}</div>
               </div>
               <div class="Mask" v-if="maskFlag" >
                 <div>

@@ -208,7 +208,7 @@
 }
 .Oral>div:nth-child(4){
   position: absolute;
-  right:0.2rem;
+  right:0.4rem;
   bottom:0.58rem;
   width:0.72rem;
   height:0.44rem;
@@ -267,7 +267,7 @@
 }
 .Prepare>div:nth-child(4){
   position: absolute;
-  right:0.2rem;
+  right:0.4rem;
   bottom:0.58rem;
   width:0.72rem;
   height:0.44rem;
@@ -327,7 +327,7 @@
 }
 .dry>div:nth-child(4){
   position: absolute;
-  right:0.2rem;
+  right:0.4rem;
   bottom:0.58rem;
   width:0.72rem;
   height:0.44rem;
