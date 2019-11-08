@@ -251,11 +251,11 @@
                     let uurrll = encodeURIComponent(H5IP+"payment?paytype="+this.shoppay+"&Discount="+this.Discount);
                     location.replace("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx406146b030189d06&redirect_uri=" + uurrll + "&response_type=code&scope=snsapi_base&#wechat_redirect");
                   } else {
-                    window.location.href = "/payment?paytype="+this.shoppay+"&Discount=" + this.Discount ;
+                    window.location.href = H5IP+"payment?paytype="+this.shoppay+"&Discount=" + this.Discount ;
                     // this.$router.push("/payment?31/" + this.TotalPrice)
                   }
                 } else {
-                  window.location.href = "/login?paytype="+this.shoppay+"&Discount=" + this.Discount ;
+                  window.location.href = H5IP+"login?paytype="+this.shoppay+"&Discount=" + this.Discount ;
                   // this.$router.push("/login?31/"+ this.Discount)
                 }
               } 
