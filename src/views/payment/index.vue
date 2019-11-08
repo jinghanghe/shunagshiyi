@@ -102,7 +102,6 @@
             //   this.OralEnglishClass=res.data.goodsArr;
             //   console.log(this.OralEnglishClass);
             // })
-            alert(localStorage.getItem("orderNo"))
             if (!isWeiXin()) {
               if (localStorage.getItem("orderNo")) {
                 this.orderNoFlag = true;
@@ -174,7 +173,7 @@
             selectPay(){
               
               if(this.weipayFlag){
-                  alert("微信")
+                
                   if(isWeiXin()){
                     this.showFlag=false
                     this.jsapipay()
@@ -182,7 +181,7 @@
                     this.tenpay()
                   }
               }else if(this.zhifupayFlag){
-                  alert("支付宝")
+              
                   this.ailipay()
               }
             },
@@ -314,7 +313,7 @@
                 return ua.match(/MicroMessenger/i) == "micromessenger";
             },
             jsApiCall(params) {
-                  alert("113")
+                  
                   var _this = this;
                   let m = "MD5";
                   let stringA = `appId=${params.appId}&nonceStr=${params.nonceStr}&package=prepay_id=${params.prepayid}&signType=${m}&timeStamp=${params.timeStamp}`;
@@ -331,7 +330,7 @@
                       paySign: params.paySign
                     },
                     function(res) {
-                        alert("223")
+                    
                       if (res.err_msg === "get_brand_wcpay_request:ok") {
                         window.location.href="/act"
                       } else if (res.err_msg === "get_brand_wcpay_request:cancel") {
@@ -358,7 +357,7 @@
                   document.attachEvent("onWeixinJSBridgeReady", this.jsApiCall(params));
                 }
               } else {
-                alert("apoo")
+             
                 this.jsApiCall(params);
               }
             },

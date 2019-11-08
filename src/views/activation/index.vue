@@ -30,12 +30,12 @@
             handlerclick(){
                let _this = this;
                 let clipboard = new this.clipboard(".cobyOrderSn");
-                alert("132")
+         
                 clipboard.on('success', function () {
-                  alert("复制成功")
+                
                 });
                 clipboard.on('error', function () {
-                  alert("复制失败")
+               
                 });
             },
           },
