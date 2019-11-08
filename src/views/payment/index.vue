@@ -65,6 +65,7 @@
     </template>
     <script>
         import "./index.css"
+        import md5 from "js-md5";
         import { ServerIP, H5IP, isWeiXin, GetQueryString } from "../../common/common";
         export default {
           data() {
