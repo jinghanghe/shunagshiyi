@@ -30,7 +30,7 @@
   height:2.78rem;
 }
 .languageText>div:nth-child(1){
-  width:2.16rem;
+  width:2.3rem;
   height:0.5rem;
   font-size:0.36rem;
   font-family:PingFangSC-Semibold,PingFang SC;
@@ -72,7 +72,7 @@
   text-align:center;
   text-align-last: center;
   outline: none;
-  background-color: #fff
+  background-color: #fff;
   /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  */
 
 }
@@ -166,7 +166,7 @@ select::-ms-expand { display: none; }
   height:2.78rem;
 }
 .ProFormaPlanText>div:nth-child(1){
-  width:2.16rem;
+  width:2.3rem;
   height:0.5rem;
   font-size:0.36rem;
   font-family:PingFangSC-Semibold,PingFang SC;
@@ -311,6 +311,7 @@ select::-ms-expand { display: none; }
   line-height:0.5rem;
   margin-left: 0.4rem;
   margin-bottom: 0.24rem;
+  text-align: right;
 }
 .IELTSodeTestText>div:nth-child(2){
   height:0.6rem;

@@ -4,7 +4,7 @@
    height:100%;
  }
  .selectText{
-  width:1.92rem;
+  /* width:1.92rem; */
   height:0.44rem;
   font-size:0.32rem;
   font-family:PingFangSC-Medium,PingFang SC;
@@ -127,7 +127,7 @@
   display: flex;
 }
 .paybottom>div:nth-child(1){
-    width:1.28rem;
+    width:1.4rem;
     height:0.44rem;
     font-size:0.32rem;
     font-family:PingFangSC-Regular,PingFang SC;
@@ -186,13 +186,13 @@
   position: absolute;
   left:1.32rem;
   top:0.2rem;
-  width:1.92rem;
+  width:2.5rem;
   height:0.44rem;
   font-size:0.32rem;
   font-family:PingFangSC-Medium,PingFang SC;
   font-weight:800;
   color:rgba(51,51,51,1);
-  line-height:0.44rem;
+  /* line-height:0.44rem; */
 }
 .Oral>div:nth-child(3){
   position: absolute;
@@ -220,9 +220,7 @@
 }
 
 
-.Prepare{
 
-}
 .Prepare{
   width:6.86rem;
   height:1.6rem;
@@ -247,13 +245,13 @@
   position: absolute;
   left:1.32rem;
   top:0.2rem;
-  width:1.92rem;
+  width:2.5rem;
   height:0.44rem;
   font-size:0.32rem;
   font-family:PingFangSC-Medium,PingFang SC;
   font-weight:800;
   color:rgba(51,51,51,1);
-  line-height:0.44rem;
+  /* line-height:0.44rem; */
 }
 .Prepare>div:nth-child(3){
   position: absolute;

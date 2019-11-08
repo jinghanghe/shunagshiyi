@@ -27,7 +27,7 @@
                   <div>点击复制微信号</div>
                   <div @click="againpay">重新支付</div>
                 </div>
-                <span>x</span>
+                <span @click="handlerx" >x</span>
               </div>
               
               <div class="selectText" >选择支付方式</div>
@@ -166,6 +166,9 @@
           },
           methods:{
             againpay(){
+                this.maskFlag=false
+            },
+            handlerx(){
                 this.maskFlag=false
             },
             selectPay(){
