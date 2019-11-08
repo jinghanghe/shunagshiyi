@@ -102,6 +102,13 @@
             //   this.OralEnglishClass=res.data.goodsArr;
             //   console.log(this.OralEnglishClass);
             // })
+            if (!isWeiXin()) {
+              if (localStorage.getItem("orderNo")) {
+                this.orderNoFlag = true;
+              }
+            } else {
+              this.showFlag = false;
+            }
           },
           mounted(){
             this.IELTSTPrice = localStorage.getItem("number") * localStorage.getItem("UnitPrice")
@@ -154,13 +161,7 @@
             }else{
               this.number = localStorage.getItem("number");
             }
-            if (!isWeiXin()) {
-              if (localStorage.getItem("orderNo")) {
-                this.orderNoFlag = true;
-              }
-            } else {
-              this.showFlag = false;
-            }
+            
           },
           methods:{
             againpay(){
@@ -249,7 +250,7 @@
               data.append('type',0);
               var goodsGroupInfo = JSON.stringify(obj)
               data.append("goodsGroupInfo",goodsGroupInfo);
-              let redirecturi = "http://" + window.location.host+"/payment"+window.location.search+"spell=1";
+              let redirecturi = "http://" + window.location.host+"/payment"+window.location.search;
               data.append("returnUrl",redirecturi)
               fetch(ServerIP+"v2/aliH5Helper/h5Pay",{
                 method:"post",
@@ -298,7 +299,7 @@
               }).then((res)=>{
                   console.log(res)
                   localStorage.setItem("orderNo", res.data.orderNo);
-                  var url = "http://" + window.location.host+"/payment"+window.location.search+"spell=1";
+                  var url = "http://" + window.location.host+"/payment"+window.location.search;
                   url = encodeURIComponent(url);
                   location.href=res.data.mweb_url + "&redirect_url=" + url;
               })
