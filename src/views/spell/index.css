@@ -425,6 +425,7 @@ select::-ms-expand { display: none; }
 .spellBottom>div:nth-child(1){
   width:70%;
   height:1rem;
+  margin-left: 0.34rem;
   display: flex;
   justify-content: space-between;
 }
@@ -468,6 +469,7 @@ select::-ms-expand { display: none; }
   color:rgba(255,255,255,1);
   text-align: center;
   line-height: 1rem;
+  margin-right: 0.32rem;
 }
 .taximeter{
   width:1.7rem;

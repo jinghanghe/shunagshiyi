@@ -81,7 +81,7 @@
                   <span>{{Discount}}</span>
                 </p>
               </div>
-              <div @click="pay">去支付</div>
+              <div @click="pay">去结算</div>
             </div>
 
             <div class="LoginPhoneTosts" v-show="this.phoneInfoFlag">
