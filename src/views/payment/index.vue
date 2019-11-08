@@ -180,6 +180,19 @@
                 let data = new FormData();
                 data.append("payType", GetQueryString("paytype"));
                 data.append("type", 0);
+                data.append("code",this.code)
+                let obj = {}
+                if(ProType){
+                  obj[ProType]=1;
+                }
+                if(OriginalType){
+                  obj[OriginalType]=1;
+                }
+                if(IELTSType){
+                  obj[IELTSType]=number;
+                }
+                var goodsGroupInfo = JSON.stringify(obj)
+                data.append("goodsGroupInfo",goodsGroupInfo);
                 fetch(ServerIP + "v2/wxH5Helper/jsAPIPay", {
                   method: "post",
                   body: data,
@@ -342,7 +355,7 @@
                 Whether() {
                   let data = new FormData();
                   data.append("orderNo", localStorage.getItem("orderNo"));
-                  fetch(ServerIP + "v2/curriculums/queryPayResult", {
+                  fetch(ServerIP + "v2/singlesDay/queryPayResult", {
                     method: "post",
                     body: data,
                     mode: "cors",
