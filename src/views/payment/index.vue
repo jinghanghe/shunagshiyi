@@ -178,7 +178,7 @@
               }
             },
             jsapipay(){ //微信公众号支付
-                alert(132)
+                alert(localStorage.getItem("token"))
                 this.code = GetQueryString("code");
                 let data = new FormData();
                 data.append("payType", GetQueryString("paytype"));
