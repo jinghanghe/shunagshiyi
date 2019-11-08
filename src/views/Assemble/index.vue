@@ -32,7 +32,7 @@
               // req.send(null);
               // console.log(req.getAllResponseHeaders());
               if(GetQueryString("token")){
-                localStorage.setItem("token",this.getCookie("token"))
+                localStorage.setItem("token",GetQueryString("token"))
               }
           },
           methods:{
