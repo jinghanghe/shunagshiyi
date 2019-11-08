@@ -385,12 +385,12 @@
                     .then(res => {
                         if(res.data.trade_state == "SUCCESS"){
                           localStorage.removeItem("orderNo")
-                          window.location.href = H5IP+"/act"
+                          window.location.href = H5IP+"act"
                           
                         }else if(res.data.trade_state == "NOTPAY"){
                            localStorage.removeItem("orderNo")
                            this.orderNoFlag=false
-                           window.location.href = H5IP+"/payment"+window.location.search
+                           window.location.href = H5IP+"payment"+window.location.search
                         }
                     });
                 }
