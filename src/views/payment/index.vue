@@ -306,6 +306,7 @@
                 return ua.match(/MicroMessenger/i) == "micromessenger";
             },
             jsApiCall(params) {
+                  alert("132")
                   var _this = this;
                   let m = "MD5";
                   let stringA = `appId=${params.appId}&nonceStr=${params.nonceStr}&package=prepay_id=${params.prepayid}&signType=${m}&timeStamp=${params.timeStamp}`;
