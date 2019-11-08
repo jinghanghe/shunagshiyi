@@ -178,7 +178,6 @@
               }
             },
             jsapipay(){ //微信公众号支付
-                alert(localStorage.getItem("token"))
                 this.code = GetQueryString("code");
                 let data = new FormData();
                 data.append("payType", GetQueryString("paytype"));
@@ -336,7 +335,7 @@
                 },
             // 公众号支付监听 否则无法调动支付控件;
             callWxPay(params) {
-              alert("params")
+
               if (typeof WeixinJSBridge == "undefined") {
                 if (document.addEventListener) {
                   document.addEventListener(
@@ -349,6 +348,7 @@
                   document.attachEvent("onWeixinJSBridgeReady", this.jsApiCall(params));
                 }
               } else {
+                alert("apoo")
                 this.jsApiCall(params);
               }
             },
