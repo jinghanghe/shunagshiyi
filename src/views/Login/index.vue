@@ -56,6 +56,7 @@
             }
           },
           created(){
+            localStorage.removeItem("orderNo")
             // sensors.quick('autoTrack');
             if(localStorage.getItem("token")){
               // console.log(window.location.search)

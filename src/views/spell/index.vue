@@ -135,6 +135,7 @@
             }
           },
           mounted(){
+            localStorage.removeItem("orderNo")
             fetch(ServerIP+"v2/singlesDay/showGoodsPageInfo")
             .then((res)=>{
               return res.json()
