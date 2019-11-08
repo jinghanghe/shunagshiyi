@@ -262,7 +262,7 @@
               data.append('type',0);
               var goodsGroupInfo = JSON.stringify(obj)
               data.append("goodsGroupInfo",goodsGroupInfo);
-              let redirecturi = "https://" + window.location.host+"/payment"+window.location.search;
+              let redirecturi ="https://www.jinghangapps.com/shuangshiyi/payment"+window.location.search;
               data.append("returnUrl",redirecturi)
               fetch(ServerIP+"v2/aliH5Helper/h5Pay",{
                 method:"post",
@@ -311,7 +311,7 @@
               }).then((res)=>{
                   console.log(res)
                   localStorage.setItem("orderNo", res.data.orderNo);
-                  var url = "https://" + window.location.host+"/payment"+window.location.search;
+                  var url = "https://www.jinghangapps.com/shuangshiyi/payment"+window.location.search;
                   url = encodeURIComponent(url);
                   location.href=res.data.mweb_url + "&redirect_url=" + url;
               })
