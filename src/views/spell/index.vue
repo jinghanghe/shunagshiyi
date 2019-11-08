@@ -130,7 +130,8 @@
               OriginalType:"",//口语课
               UnitPrice:"",//单价
               shoppay:"",
-              phoneInfoFlag:false
+              phoneInfoFlag:false,
+              
             }
           },
           mounted(){

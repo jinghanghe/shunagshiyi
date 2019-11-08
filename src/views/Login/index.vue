@@ -147,7 +147,7 @@
                             console.log(res)
                            if(this.isWeiXin()){
                              localStorage.setItem("token",res.token)
-                            var uurrll = H5IP+"payment/"+window.location.search
+                            var uurrll = H5IP+"payment/"+window.location.search;
                             uurrll = encodeURIComponent(uurrll)
                             location.replace("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx406146b030189d06&redirect_uri="+uurrll+"&response_type=code&scope=snsapi_base&#wechat_redirect");
                              // this.$router.push("/payment")
