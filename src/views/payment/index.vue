@@ -322,6 +322,7 @@
                       paySign: params.paySign
                     },
                     function(res) {
+                        alert("223")
                       if (res.err_msg === "get_brand_wcpay_request:ok") {
                         window.location.href="/act"
                       } else if (res.err_msg === "get_brand_wcpay_request:cancel") {
