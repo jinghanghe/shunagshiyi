@@ -275,7 +275,7 @@
               }).then((res)=>{
                   console.log(res)
                   localStorage.setItem("orderNo", res.data.orderNo);
-                  var url = "http://" + window.location.host+"/spell"+window.location.search;
+                  var url = "http://" + window.location.host+"/payment"+window.location.search;
                   url = encodeURIComponent(url);
                   location.href=res.data.mweb_url + "&redirect_url=" + url;
               })
@@ -357,7 +357,7 @@
                         if(res.data.trade_state == "SUCCESS"){
                           window.location.href = H5IP+"/act"
                         }else if(res.data.trade_state == "NOTPAY"){
-
+                           window.location.href = H5IP+"/payment"+window.location.search
                         }
                     });
                 }
