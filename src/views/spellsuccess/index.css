@@ -1,0 +1,144 @@
+.Spellsuccess{
+  overflow: hidden;
+}
+.SpellsuccessOne{
+  width:64px;
+  height:64px;
+  background:rgba(0,204,140,1);
+  margin:20px auto; 
+  background-image: url("../../static/okey_green@3x.png");
+  background-size: 100% 100%;
+  border-radius:50%; 
+}
+.SpellsuccessTwo{
+  /* background:rgba(0,204,140,1); */
+  width:72px;
+  height:25px;
+  font-size:18px;
+  font-family:PingFangSC-Medium,PingFangSC;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  line-height:25px;
+  margin:20px auto; 
+}
+.SpellsuccessThree{
+  width:125px;
+  height:50px;
+  display: flex;
+  margin: 40px auto;
+}
+.SpellsuccessThree>div:nth-child(1){
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  margin-right: 20px;
+   background-size: 100% 100%;
+   position: relative;
+}
+.SpellsuccessThree>div:nth-child(1)>p{
+  display: inline-block;
+  width:0.8rem;
+  height:0.32rem;
+  background:rgba(48,123,254,1);
+  border-radius:0.16rem;
+  text-align: center;
+  line-height: 0.32rem;
+  font-size:0.2rem;
+  color: #FFFFFF;
+  position: absolute;
+  top:-0.25rem;
+  left:50%;
+  transform: translateX(-50%);
+}
+.SpellsuccessThree>div:nth-child(2){
+  border:0.02rem dashed rgba(206,206,206,1);
+  text-align: center;
+  color:rgba(180,180,180,1);
+  line-height: 1rem;
+  /* margin-left: 0.4rem; */
+  font-size:0.32rem;
+  width:0.98rem;
+  height:0.98rem;
+  /* display: inline-block; */
+  /* box-sizing: border-box; */
+  border-radius:50%;
+  /* background-image:   */
+  background-size: 100% 100%;
+}
+.SpellsuccessFive{
+  width:248px;
+  height:22px;
+  font-size:16px;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:400;
+  color:rgba(128,128,128,1);
+  line-height:22px;
+  margin: 0 auto;
+}
+.SpellsuccessSix{
+  width:290px;
+  height:156px;
+  display: flex;
+  margin: 21px auto;
+}
+.SpellsuccessSix>div:nth-child(1){
+  width:133px;
+  height:156px;
+  margin-right:24px;
+  background-color:rgba(48,123,254,1);
+  border-radius:8px;
+
+}
+.SpellsuccessSix>div:nth-child(2){
+  width:133px;
+  height:156px;
+  border-radius:8px;
+  background-color:rgba(0,204,140,1);
+}
+.SpellsuccessSix>div:nth-child(1)>div:nth-of-type(1){
+  width:57px;
+  height:57px;
+  margin:36px auto;
+  background-image: url("../../static/苹果\ \(1\)\ copy@3x.png");
+  background-size: 100% 100%;
+
+}
+.SpellsuccessSix>div:nth-child(2)>div:nth-of-type(1){
+  width:57px;
+  height:57px;
+  margin:36px auto;
+  background-image: url("../../static/安卓\ \(1\)\ copy@3x.png");
+  background-size: 100% 100%;
+
+}
+.SpellsuccessSix>div:nth-child(1)>p:nth-of-type(1){
+  width:65px;
+  height:22px;
+  font-size:16px;
+  font-family:PingFangSC-Semibold,PingFangSC;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  line-height:22px;
+  margin:0 auto;
+
+}
+.SpellsuccessSix>div:nth-child(2)>p:nth-of-type(1){
+  width:70px;
+  height:22px;
+  font-size:16px;
+  font-family:PingFangSC-Semibold,PingFangSC;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  line-height:22px;
+  margin:0 auto;
+
+}
+.downloads{
+  width:2.2rem;
+  height:1.26rem;
+  background-image: url("../../static/下载@3x.png");
+  background-size: 100% 100%;
+  position: absolute;
+  right:0.2rem;
+  top:0.05rem;
+}

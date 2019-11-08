@@ -72,7 +72,8 @@
   text-align:center;
   text-align-last: center;
   outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  background-color: #fff
+  /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  */
 
 }
 select::-ms-expand { display: none; }
@@ -80,7 +81,7 @@ select::-ms-expand { display: none; }
   text-align: center;
   outline: none;
   border:none;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 .languageText>div:nth-child(3){
   height:0.5rem;
@@ -207,7 +208,8 @@ select::-ms-expand { display: none; }
   text-align:center;
   text-align-last: center;
   outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  background-color: #fff
+  /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  */
 
 }
 select::-ms-expand { display: none; }
@@ -215,7 +217,7 @@ select::-ms-expand { display: none; }
   text-align: center;
   outline: none;
   border:none;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 .ProFormaPlanText>div:nth-child(3){
   height:0.5rem;
@@ -296,7 +298,7 @@ select::-ms-expand { display: none; }
 .IELTSodeTestText{
   margin-left: 1.08rem;
   margin-top: 0.34rem;
-  width:2.9rem;
+  width:2.56rem;
   height:2.78rem;
 }
 .IELTSodeTestText>div:nth-child(1){
@@ -342,7 +344,9 @@ select::-ms-expand { display: none; }
   text-align:center;
   text-align-last: center;
   outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  background-color: #fff;
+  /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  */
+  
 
 }
 select::-ms-expand { display: none; }
@@ -350,7 +354,7 @@ select::-ms-expand { display: none; }
   text-align: center;
   outline: none;
   border:none;
-  background-color: #fff;
+
 }
 .IELTSodeTestText>div:nth-child(3){
   height:0.5rem;
@@ -465,32 +469,32 @@ select::-ms-expand { display: none; }
   line-height: 1rem;
 }
 .taximeter{
-  width:2rem;
+  width:1.7rem;
   height:0.56rem;
   border-radius:0.12rem 0.12rem 0.12rem 0.12rem;
   border:1px solid rgba(186,186,186,1);
   display: flex;
 }
 .taximeter>div:nth-child(1){
-  width:0.6rem;
+  width:0.5rem;
   height:0.56rem;
   border-radius:0.12rem 0 0 0.12rem;
   border-right:0.02rem solid rgba(186,186,186,1);
   text-align: center;
-  line-height: 0.6rem;
+  line-height: 0.56rem;
 }
 .taximeter>div:nth-child(2){
-  width:0.8rem;
+  width:0.7rem;
   height:0.6rem;
   border-right:0.02rem solid rgba(186,186,186,1);
   text-align: center;
   line-height: 0.6rem;
 }
 .taximeter>div:nth-child(3){
-  width:0.6rem;
-  height:0.6rem;
+  width:0.5rem;
+  height:0.56rem;
   text-align: center;
-  line-height: 0.6rem;
+  line-height: 0.56rem;
   /* border-radius:0px 6px 6px 0px; */
   /* border:1px solid rgba(186,186,186,1); */
 }

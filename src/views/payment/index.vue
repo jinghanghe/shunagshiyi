@@ -338,21 +338,26 @@
             },
                 //判断是否支付成功
                 Whether() {
-                  // let data = new FormData();
-                  // data.append("orderNo", localStorage.getItem("orderNo"));
-                  // fetch(ServerIP + "v2/curriculums/queryPayResult", {
-                  //   method: "post",
-                  //   body: data,
-                  //   mode: "cors",
-                  //   headers: {
-                  //     authorization: "Bearer " + localStorage.getItem("token")
-                  //   }
-                  // })
-                  //   .then(res => {
-                  //     return res.json();
-                  //   })
-                  //   .then(res => {
-                  //   });
+                  let data = new FormData();
+                  data.append("orderNo", localStorage.getItem("orderNo"));
+                  fetch(ServerIP + "v2/curriculums/queryPayResult", {
+                    method: "post",
+                    body: data,
+                    mode: "cors",
+                    headers: {
+                      authorization: "Bearer " + localStorage.getItem("token")
+                    }
+                  })
+                    .then(res => {
+                      return res.json();
+                    })
+                    .then(res => {
+                        if(res.data.trade_state == "SUCCESS"){
+                          window.location.href = H5IP+"/act"
+                        }else if(res.data.trade_state == "NOTPAY"){
+                          
+                        }
+                    });
                 }
           },
 

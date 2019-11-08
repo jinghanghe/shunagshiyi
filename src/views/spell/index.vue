@@ -75,7 +75,7 @@
 
             <div class="spellBottom">
               <div>
-                <s>{{TotalPrice}}</s>
+                <s>￥{{TotalPrice}}</s>
                 <p>
                   现价:￥
                   <span>{{Discount}}</span>
@@ -131,7 +131,6 @@
               UnitPrice:"",//单价
               shoppay:"",
               phoneInfoFlag:false
-
             }
           },
           mounted(){

@@ -16,8 +16,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'indexhome',
-      component: IndexHome,
+      name: 'Assemble',
+      component: Assemble,
 
     },
     {
@@ -40,8 +40,8 @@ export default new Router({
     },
     {
       path: '/ass',
-      name: 'Assemble',
-      component: Assemble,
+      name: 'IndexHome',
+      component: IndexHome,
 
     },
     {

@@ -27,7 +27,7 @@
           },
           methods:{
             handlerclick(){
-              this.$router.push("/")
+              this.$router.push("/ass")
             }
           },
 

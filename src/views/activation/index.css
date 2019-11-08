@@ -19,6 +19,8 @@
     border-radius:0.16rem;
     margin: 0 auto;
     margin-top: 0.28rem;
+    background-image:url("https://uploader.shimo.im/f/WkXV6VES7jgPnYzn.png!original");
+    background-size: 100% 100%;
 }
 .ActMain>div:nth-child(2){
     font-size:0.36rem;
@@ -89,4 +91,10 @@
     color:rgba(255,255,255,1);
     line-height: 1rem;
     margin:0 auto;
+}
+textarea{
+    display: none;
+}
+.ActMain>span{
+    display: none;
 }
