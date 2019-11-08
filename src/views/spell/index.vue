@@ -175,27 +175,27 @@
               if(event.target.value==30){
                 this.ProOriginalPrice=this.OralEnglishClass[6].originPrice /100 ;
                 this.ProPresentPrice=this.OralEnglishClass[6].currentPrice /100;
-                this.ProaveragePerDay="(￥"+(this.OralEnglishClass[6].currentPrice /100 / 7).toFixed(1)+"天)";
+                this.ProaveragePerDay="(￥"+(this.OralEnglishClass[6].currentPrice /100 / 30).toFixed(1)+"天)";
                 this.ProType = this.OralEnglishClass[6].payType;
               }else if(event.target.value==60){
                 this.ProOriginalPrice=this.OralEnglishClass[7].originPrice /100 ;
                 this.ProPresentPrice=this.OralEnglishClass[7].currentPrice /100;
-                this.ProaveragePerDay="(￥"+(this.OralEnglishClass[7].currentPrice / 100 / 14).toFixed(1)+"天)";
+                this.ProaveragePerDay="(￥"+(this.OralEnglishClass[7].currentPrice / 100 / 60).toFixed(1)+"天)";
                 this.ProType = this.OralEnglishClass[7].payType;
               }else if(event.target.value==90){
                 this.ProOriginalPrice=this.OralEnglishClass[8].originPrice /100;
                 this.ProPresentPrice=this.OralEnglishClass[8].currentPrice /100;
-                this.ProaveragePerDay="(￥"+(this.OralEnglishClass[8].currentPrice/ 100 / 30).toFixed(1)+"天)";
+                this.ProaveragePerDay="(￥"+(this.OralEnglishClass[8].currentPrice/ 100 / 90).toFixed(1)+"天)";
                 this.ProType = this.OralEnglishClass[8].payType;
               }else if(event.target.value==7){
                 this.ProOriginalPrice=this.OralEnglishClass[4].originPrice /100;
                 this.ProPresentPrice=this.OralEnglishClass[4].currentPrice /100;
-                this.ProaveragePerDay="(￥"+(this.OralEnglishClass[4].currentPrice/100 / 60).toFixed(1)+"天)";
+                this.ProaveragePerDay="(￥"+(this.OralEnglishClass[4].currentPrice/100 / 7).toFixed(1)+"天)";
                 this.ProType = this.OralEnglishClass[4].payType;
               }else if(event.target.value==14){
                 this.ProOriginalPrice=this.OralEnglishClass[5].originPrice /100;
                 this.ProPresentPrice=this.OralEnglishClass[5].currentPrice /100;
-                this.ProaveragePerDay="(￥"+(this.OralEnglishClass[5].currentPrice / 100/ 90).toFixed(1)+"天)";
+                this.ProaveragePerDay="(￥"+(this.OralEnglishClass[5].currentPrice / 100/ 14).toFixed(1)+"天)";
                 this.ProType = this.OralEnglishClass[5].payType;
               }else if(event.target.value==0){
                 this.ProOriginalPrice=0;
