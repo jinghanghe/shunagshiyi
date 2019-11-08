@@ -356,7 +356,7 @@ html,body{
   background:rgba(255,255,255,1);
   border-radius:0.16rem;
   margin:0 auto;
-  margin-top: 2.4rem;
+  margin-top: 15%;
   overflow: hidden;
   position: relative;
 }
@@ -460,6 +460,7 @@ html,body{
   position: absolute;
   top:5.5rem;
   left:1.96rem;
+  z-index: 10;
 }
 
 .shadow{

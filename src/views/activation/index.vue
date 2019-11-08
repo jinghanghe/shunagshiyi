@@ -11,7 +11,9 @@
             <div>份“英语学习大礼包”。</div>
             <div id="add" @click="handlerclick">点击复制微信号</div>
             <div id="code"   :style="{opacity:'0'}" className="copycode" >18611575192</div>
-            
+            <div class="LoginPhoneTosts" v-show="this.phoneInfoFlag">
+                  复制成功
+              </div>
         </div>
     </template>
     <script>
@@ -23,6 +25,7 @@
             return {
               collapsed: false,
               platform:"",
+              phoneInfoFlag:false,
             }
           },
           mounted(){
@@ -30,10 +33,12 @@
           },
           methods:{
             handlerclick(){
-
                 this.copy("code")
+                this.phoneInfoFlag=true;
+                setTimeout(()=>{
+                   this.phoneInfoFlag=false;
+                },2000)
             },
-           
              copy (id, attr) 
   {
     let target = null;

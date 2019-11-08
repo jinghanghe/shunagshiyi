@@ -143,7 +143,7 @@
                             this.phoneEmptyFlag=true;
                             setTimeout(()=>{
                               this.phoneEmptyFlag=false;
-                            })
+                            },2000)
                         }else if(res.code==200){
                             console.log(res)
                            if(this.isWeiXin()){

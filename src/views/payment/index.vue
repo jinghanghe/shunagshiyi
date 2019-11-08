@@ -24,7 +24,7 @@
                   <div>添加鲸小爱助手查询吧</div>
                   <div>点击复制【18611575192】</div>
                   <div>微信中搜索小助手了解更多详情</div>
-                  <div>点击复制微信号</div>
+                  <div @click="handlerfuzhi" >点击复制微信号</div>
                   <div @click="againpay">重新支付</div>
                 </div>
                 <span @click="handlerx" >x</span>
@@ -52,7 +52,7 @@
                 <div @click="selectPay" >立即购买</div>
               </div>
               <div class="LoginPhoneTosts" v-show="this.phoneInfoFlag">
-                  支付成功
+                  复制成功
               </div>
               <div class="shadow" v-if="this.orderNoFlag">
                 <div>
@@ -61,6 +61,7 @@
                   <p @click="Unpaid">支付遇到问题，请重新支付</p>
                 </div>
               </div>
+              <div id="code"   :style="{opacity:'0'}" className="copycode" >18611575192</div>
         </div>
     </template>
     <script>
@@ -164,6 +165,13 @@
             
           },
           methods:{
+            handlerfuzhi(){
+              this.copy("code")
+              this.phoneInfoFlag=true;
+              setTimeout(()=>{
+                this.phoneInfoFlag=false;
+              },2000)
+            },
             againpay(){
                 this.maskFlag=false
                 this.selectPay()
@@ -366,6 +374,43 @@
              this.orderNoFlag = false;
              this.Whether();         
             },
+            copy (id, attr) 
+              {
+                let target = null;
+                
+                if (attr) {
+                  target = document.createElement("div");
+                  target.id = "tempTarget";
+                  target.style.opacity = "0";
+                  if (id) {
+                  let curNode = document.querySelector("#" + id);
+                  target.innerText = curNode[attr];
+                  } else {
+                  target.innerText = attr;
+                  }
+                  document.body.appendChild(target);
+                } else {
+                  target = document.querySelector("#" + id);
+                }
+                
+                try {
+                let range = document.createRange();
+                range.selectNode(target);
+                console.log(range)
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand("copy");
+                window.getSelection().removeAllRanges();
+                console.log("复制成功")
+                } catch (e) {
+                console.log("复制失败")
+                }
+                
+                if (attr) {
+                // remove temp target
+                target.parentElement.removeChild(target);
+                }
+                },
             Unpaid(){
              this.orderNoFlag = false;
              this.Whether(); 
