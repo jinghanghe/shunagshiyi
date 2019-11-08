@@ -166,6 +166,7 @@
           methods:{
             againpay(){
                 this.maskFlag=false
+                this.selectPay()
             },
             handlerx(){
                 this.maskFlag=false
