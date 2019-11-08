@@ -226,7 +226,7 @@
               data.append('type',0);
               var goodsGroupInfo = JSON.stringify(obj)
               data.append("goodsGroupInfo",goodsGroupInfo);
-              let redirecturi = "http://" + window.location.host+"/spell";
+              let redirecturi = "http://" + window.location.host+"/payment"+window.location.search;
               data.append("returnUrl",redirecturi)
               fetch(ServerIP+"v2/aliH5Helper/h5Pay",{
                 method:"post",
@@ -238,6 +238,7 @@
               }).then((res)=>{
                 return res.json()
               }).then((res)=>{
+                localStorage.setItem("orderNo", res.data.orderNo);
                 location.href=res.data.url;
               })
             },
