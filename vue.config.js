@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: '/camp',
+    publicPath: '/',
     devServer: {
         host: '0.0.0.0',
         hot: true,
