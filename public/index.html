@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <!-- <link rel="stylesheet" href="../src/assets/dist/css/swiper.min.css"> -->
     <title>鲸小爱英语</title>
   </head>
   <body>
@@ -15,14 +15,38 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-    <script src="https://res2.wx.qq.com/open/js/jweixin-1.4.0.js" type="text/javascript"></script>
+    <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js" type="text/javascript"></script>
     <script type="text/javascript">
-     
       define = null;
       require = null;
+      window.onload = function(){
+      document.addEventListener('touchstart', function(event) { if (event.touches.length > 1) { event.preventDefault() } })
+      document.addEventListener('gesturestart', function(event) { event.preventDefault() })
+     }
+     var u = navigator.userAgent;
+          var isIos=u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1;
+	   if(isIos) {
+            $('input[name="keywords"]').focus(function(e){
+                var mviewport;
+                var metas = document.getElementsByTagName('meta')||[];
+                for(var i in metas){
+                  var meta = metas[i]||{},mtname = meta.name||"";
+                  if (mtname.toLowerCase() == "viewport") {
+                    mviewport = meta;break;
+                  }
+                }
+                if(mviewport){
+                    var metacontent=mviewport.content;
+                    if(metacontent && metacontent.replace){
+                        mviewport.content=metacontent.replace('user-scalable=yes','user-scalable=no');
+                        setTimeout(function(){
+                            mviewport.content=metacontent;
+                        },2000)
+                    }
+                }
+            })
+         }  
     </script>
-    <!-- <script src="autotrack.js"></script> -->
-    <!-- <script src="../src/assets/dist/js/swiper.min.js"></script> -->
   </body>
 </html>
 
