@@ -37,16 +37,22 @@
               this.$router.push("/ass")
             }
           },
-          getCookie(name)
-            {
-                var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)"); //正则匹配
-                if(arr=document.cookie.match(reg)){
-                  return unescape(arr[2]);
-                }
-                else{
-                return null;
-                }
+           getCookie(name) {
+        //获取当前所有cookie
+        var strCookies = document.cookie;
+        //截取变成cookie数组
+        var array = strCookies.split(';');
+        //循环每个cookie
+        for (var i = 0; i < array.length; i++) {
+            //将cookie截取成两部分
+            var item = array[i].split("=");
+            //判断cookie的name 是否相等
+            if (item[0] == name) {
+                return item[1];
             }
+        }
+        return null;
+       }
 
         }
           

@@ -168,6 +168,7 @@
                 this.OriginalPrice=0;
                 this.PresentPrice=0;
                 this.averagePerDay="(￥0天)";
+                this.OriginalType=""
               }
               this.TotalPrice=this.OriginalPrice  + this.ProOriginalPrice +this.IELTSOriginalPrice ;
               this.Discount=this.PresentPrice  + this.ProPresentPrice  +this.IELTSPresentPrice ;
@@ -202,6 +203,7 @@
               }else if(event.target.value==0){
                 this.ProOriginalPrice=0;
                 this.ProPresentPrice=0;
+                 this.ProType=""
                 this.ProaveragePerDay="(￥0天)";
               }
               this.TotalPrice=this.OriginalPrice  + this.ProOriginalPrice  +this.IELTSOriginalPrice  ;
