@@ -148,6 +148,7 @@
           },
           methods:{
             handlerSelect(event){
+              console.log(event.target.value)
               if(event.target.value==30){
                 this.OriginalPrice=this.OralEnglishClass[0].originPrice  / 100 ;
                 this.PresentPrice=this.OralEnglishClass[0].currentPrice / 100;
@@ -172,6 +173,7 @@
               this.Discount=this.PresentPrice  + this.ProPresentPrice  +this.IELTSPresentPrice ;
             },
             handlerSelectPro(event){
+              console.log(event.target.value)
               if(event.target.value==30){
                 this.ProOriginalPrice=this.OralEnglishClass[6].originPrice /100 ;
                 this.ProPresentPrice=this.OralEnglishClass[6].currentPrice /100;
