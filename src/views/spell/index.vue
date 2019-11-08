@@ -149,82 +149,82 @@
           methods:{
             handlerSelect(event){
               if(event.target.value==30){
-                this.OriginalPrice=this.OralEnglishClass[0].originPrice;
-                this.PresentPrice=this.OralEnglishClass[0].currentPrice;
-                this.averagePerDay="(￥"+this.OralEnglishClass[0].currentPrice / 10+"天)";
+                this.OriginalPrice=this.OralEnglishClass[0].originPrice  / 100 ;
+                this.PresentPrice=this.OralEnglishClass[0].currentPrice / 100;
+                this.averagePerDay="(￥"+this.OralEnglishClass[0].currentPrice / 30+"天)";
                 this.OriginalType = this.OralEnglishClass[0].payType
               }else if(event.target.value==180){
-                this.OriginalPrice=this.OralEnglishClass[1].originPrice;
-                this.PresentPrice=this.OralEnglishClass[1].currentPrice;
-                this.averagePerDay="(￥"+this.OralEnglishClass[1].currentPrice / 10+"天)";
+                this.OriginalPrice=this.OralEnglishClass[1].originPrice /100 ;
+                this.PresentPrice=this.OralEnglishClass[1].currentPrice /100;
+                this.averagePerDay="(￥"+this.OralEnglishClass[1].currentPrice / 180+"天)";
                 this.OriginalType = this.OralEnglishClass[1].payType
               }else if(event.target.value==360){
-                this.OriginalPrice=this.OralEnglishClass[2].originPrice;
-                this.PresentPrice=this.OralEnglishClass[2].currentPrice;
-                this.averagePerDay="(￥"+this.OralEnglishClass[2].currentPrice / 10+"天)";
+                this.OriginalPrice=this.OralEnglishClass[2].originPrice /100;
+                this.PresentPrice=this.OralEnglishClass[2].currentPrice /100;
+                this.averagePerDay="(￥"+this.OralEnglishClass[2].currentPrice / 360+"天)";
                 this.OriginalType = this.OralEnglishClass[2].payType
               }else if(event.target.value==0){
                 this.OriginalPrice=0;
                 this.PresentPrice=0;
                 this.averagePerDay="(￥0天)";
               }
-              this.TotalPrice=this.OriginalPrice + this.ProOriginalPrice+this.IELTSOriginalPrice;
-              this.Discount=this.PresentPrice + this.ProPresentPrice+this.IELTSPresentPrice;
+              this.TotalPrice=this.OriginalPrice / 100 + this.ProOriginalPrice /100+this.IELTSOriginalPrice /100;
+              this.Discount=this.PresentPrice /100 + this.ProPresentPrice /100 +this.IELTSPresentPrice /100;
             },
             handlerSelectPro(event){
               if(event.target.value==30){
-                this.ProOriginalPrice=this.OralEnglishClass[6].originPrice;
-                this.ProPresentPrice=this.OralEnglishClass[6].currentPrice;
-                this.ProaveragePerDay="(￥"+this.OralEnglishClass[6].currentPrice / 10+"天)";
+                this.ProOriginalPrice=this.OralEnglishClass[6].originPrice /100 ;
+                this.ProPresentPrice=this.OralEnglishClass[6].currentPrice /100;
+                this.ProaveragePerDay="(￥"+this.OralEnglishClass[6].currentPrice / 7+"天)";
                 this.ProType = this.OralEnglishClass[6].payType;
               }else if(event.target.value==60){
-                this.ProOriginalPrice=this.OralEnglishClass[7].originPrice;
-                this.ProPresentPrice=this.OralEnglishClass[7].currentPrice;
-                this.ProaveragePerDay="(￥"+this.OralEnglishClass[7].currentPrice / 10+"天)";
+                this.ProOriginalPrice=this.OralEnglishClass[7].originPrice /100 ;
+                this.ProPresentPrice=this.OralEnglishClass[7].currentPrice /100;
+                this.ProaveragePerDay="(￥"+this.OralEnglishClass[7].currentPrice / 14+"天)";
                 this.ProType = this.OralEnglishClass[7].payType;
               }else if(event.target.value==90){
-                this.ProOriginalPrice=this.OralEnglishClass[8].originPrice;
-                this.ProPresentPrice=this.OralEnglishClass[8].currentPrice;
-                this.ProaveragePerDay="(￥"+this.OralEnglishClass[8].currentPrice / 10+"天)";
+                this.ProOriginalPrice=this.OralEnglishClass[8].originPrice /100;
+                this.ProPresentPrice=this.OralEnglishClass[8].currentPrice /100;
+                this.ProaveragePerDay="(￥"+this.OralEnglishClass[8].currentPrice / 30+"天)";
                 this.ProType = this.OralEnglishClass[8].payType;
               }else if(event.target.value==7){
-                this.ProOriginalPrice=this.OralEnglishClass[4].originPrice;
-                this.ProPresentPrice=this.OralEnglishClass[4].currentPrice;
-                this.ProaveragePerDay="(￥"+this.OralEnglishClass[4].currentPrice / 10+"天)";
+                this.ProOriginalPrice=this.OralEnglishClass[4].originPrice /100;
+                this.ProPresentPrice=this.OralEnglishClass[4].currentPrice /100;
+                this.ProaveragePerDay="(￥"+this.OralEnglishClass[4].currentPrice / 60+"天)";
                 this.ProType = this.OralEnglishClass[4].payType;
               }else if(event.target.value==14){
-                this.ProOriginalPrice=this.OralEnglishClass[5].originPrice;
-                this.ProPresentPrice=this.OralEnglishClass[5].currentPrice;
-                this.ProaveragePerDay="(￥"+this.OralEnglishClass[5].currentPrice / 10+"天)";
+                this.ProOriginalPrice=this.OralEnglishClass[5].originPrice /100;
+                this.ProPresentPrice=this.OralEnglishClass[5].currentPrice /100;
+                this.ProaveragePerDay="(￥"+this.OralEnglishClass[5].currentPrice / 90+"天)";
                 this.ProType = this.OralEnglishClass[5].payType;
               }else if(event.target.value==0){
                 this.ProOriginalPrice=0;
                 this.ProPresentPrice=0;
                 this.ProaveragePerDay="(￥0天)";
               }
-              this.TotalPrice=this.OriginalPrice + this.ProOriginalPrice+this.IELTSOriginalPrice;
-              this.Discount=this.PresentPrice + this.ProPresentPrice+this.IELTSPresentPrice;
+              this.TotalPrice=this.OriginalPrice /100 + this.ProOriginalPrice /100 +this.IELTSOriginalPrice /100 ;
+              this.Discount=this.PresentPrice /100 + this.ProPresentPrice /100 +this.IELTSPresentPrice /100 ;
             },
             subtraction(){
               this.number--
               if(this.number<0){
                 this.number=0
               }
-              this.IELTSOriginalPrice=this.OralEnglishClass[3].originPrice * this.number;
-              this.IELTSPresentPrice=this.OralEnglishClass[3].currentPrice * this.number;
-              this.IELTSaveragePerDay="(￥"+this.OralEnglishClass[3].currentPrice * this.number / 10+"天)";
-              this.TotalPrice=this.OriginalPrice + this.ProOriginalPrice+this.IELTSOriginalPrice;
-              this.Discount=this.PresentPrice + this.ProPresentPrice+this.IELTSPresentPrice;
+              this.IELTSOriginalPrice=this.OralEnglishClass[3].originPrice /100  * this.number;
+              this.IELTSPresentPrice=this.OralEnglishClass[3].currentPrice /100 * this.number;
+              this.IELTSaveragePerDay="(￥"+this.OralEnglishClass[3].currentPrice / 100 * this.number / 10+"天)";
+              this.TotalPrice=this.OriginalPrice /100 + this.ProOriginalPrice /100 + this.IELTSOriginalPrice / 100;
+              this.Discount=this.PresentPrice / 100 + this.ProPresentPrice /100 + this.IELTSPresentPrice /100 ;
               this.IELTSType=this.OralEnglishClass[3].payType;
               this.UnitPrice = this.OralEnglishClass[3].currentPrice;
             },
             add(){
               this.number++;
-              this.IELTSOriginalPrice=this.OralEnglishClass[3].originPrice * this.number;
-              this.IELTSPresentPrice=this.OralEnglishClass[3].currentPrice * this.number;
-              this.IELTSaveragePerDay="(￥"+this.OralEnglishClass[3].currentPrice * this.number / 10+"天)";
-              this.TotalPrice=this.OriginalPrice + this.ProOriginalPrice+this.IELTSOriginalPrice;
-              this.Discount=this.PresentPrice + this.ProPresentPrice+this.IELTSPresentPrice;
+              this.IELTSOriginalPrice=this.OralEnglishClass[3].originPrice / 100 * this.number;
+              this.IELTSPresentPrice=this.OralEnglishClass[3].currentPrice  / 100* this.number;
+              this.IELTSaveragePerDay="(￥"+this.OralEnglishClass[3].currentPrice /100  * this.number / 10+"天)";
+              this.TotalPrice=this.OriginalPrice /100 + this.ProOriginalPrice / 100 +this.IELTSOriginalPrice /100 ;
+              this.Discount=this.PresentPrice  /100 +  this.ProPresentPrice / 100  + this.IELTSPresentPrice /100 ;
               this.IELTSType = this.OralEnglishClass[3].payType;
               this.IELTSType=this.OralEnglishClass[3].payType;
               this.UnitPrice = this.OralEnglishClass[3].currentPrice;
@@ -248,7 +248,7 @@
                 if(localStorage.getItem("token")) {
                   
                   if(isWeiXin()) {
-                    let uurrll = encodeURIComponent("http://jztest.jinghangapps.com/payment?paytype="+this.shoppay+"&Discount="+this.Discount);
+                    let uurrll = encodeURIComponent(H5IP+"payment?paytype="+this.shoppay+"&Discount="+this.Discount);
                     location.replace("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx406146b030189d06&redirect_uri=" + uurrll + "&response_type=code&scope=snsapi_base&#wechat_redirect");
                   } else {
                     window.location.href = "/payment?paytype="+this.shoppay+"&Discount=" + this.Discount ;

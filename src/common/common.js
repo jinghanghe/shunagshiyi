@@ -1,6 +1,6 @@
-export const ServerIP = "http://jztest.jinghangapps.com:5555/";
+export const ServerIP = "http://www.jinghangapps.com/activityTest/";
 
-export const H5IP = "http://jztest.jinghangapps.com/";
+export const H5IP = "https://www.jinghangapps.com/shuangshiyi/";
 
 // export const H5IP = "http://localhost:8003/";
 
