@@ -389,6 +389,7 @@
                           
                         }else if(res.data.trade_state == "NOTPAY"){
                            localStorage.removeItem("orderNo")
+                           this.orderNoFlag=false
                            window.location.href = H5IP+"/payment"+window.location.search
                         }
                     });
