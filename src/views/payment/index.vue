@@ -166,10 +166,9 @@
               
               if(this.weipayFlag){
                   alert("微信")
-                  
                   if(isWeiXin()){
                     this.showFlag=false
-                  this.jsapipay()
+                    this.jsapipay()
                   }else{
                     this.tenpay()
                   }
@@ -179,11 +178,16 @@
               }
             },
             jsapipay(){ //微信公众号支付
+                alert(132)
                 this.code = GetQueryString("code");
                 let data = new FormData();
                 data.append("payType", GetQueryString("paytype"));
                 data.append("type", 0);
                 data.append("code",this.code)
+                var ProType = this.ProType;
+                var OriginalType = this.OriginalType;
+                var IELTSType = this.IELTSType;
+                var number = this.number;
                 let obj = {}
                 if(ProType){
                   obj[ProType]=1;
