@@ -1,0 +1,190 @@
+.Login{
+  width:100%;
+  position: relative;
+  overflow: hidden;
+}
+.LoginLOGO{
+  width:1.2rem;
+  height:1.24rem;
+  background-image: url("../../static/鲸小爱英语yy\ copy@3x.png");
+  background-size: 100% 100%;
+  margin:0.6rem auto;
+}
+.LoginPhone{
+  width: 5.66rem;
+  height:0.8rem;
+  box-sizing: border-box;
+  padding-bottom: 0.16rem;
+  border-bottom: 0.02rem solid #F2F2F2;
+  margin:1.14rem auto;
+  /* display: flex; */
+  justify-content:space-around;
+}
+.LoginPhone>input{
+  background:none;  
+  outline:none;  
+  border:none;
+  width:2.56rem;
+  font-size: 0.36rem;
+}
+.LoginPhone>span{
+  display:inline-block;
+  width:1.5rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:600;
+  text-align: center;
+  /* color:rgba(51,51,51,1); */
+  line-height:0.4rem;
+  margin-left: 1.15rem;
+}
+
+
+.LoginCode{
+  width:5.66rem;
+  height:0.8rem;
+  box-sizing: border-box;
+  padding-bottom: 0.16rem;
+  border-bottom: 0.02rem solid #F2F2F2;
+  margin:0.76rem auto;
+  /* margin-left: 0.3rem; */
+  display: flex;
+  justify-content:space-around;
+}
+.LoginCode>input{
+  background:none;  
+  outline:none;  
+  border:none;
+  font-size: 0.36rem;
+  /* width:2.56rem; */
+}
+.LoginCode>span{
+  display:inline-block;
+  width:1.4rem;
+  height:0.4rem;
+  font-size:0.28rem;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  line-height:0.4rem;
+  margin-left: 0.3rem;
+}
+
+
+.Loginagreement{
+  width:4.8rem;
+  height:0.34rem;
+  margin-left:50%;
+  transform: translateX(-50%);
+}
+.Loginagreement>span{
+  font-size: 0.24rem;
+}
+.Loginagreement>span:nth-child(2){
+  color: #0F78D2;
+}
+
+.Loginregister{
+  width:5.56rem;
+  height:1.06rem;
+  background-color:#307BFE;
+  text-align: center;
+  line-height: 1.06rem;
+  border-radius:0.16rem;
+  margin: 0.4rem auto;
+  font-size:18px;
+  font-family:PingFangSC-Medium,PingFangSC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+}
+
+.LoginPhoneTost{
+  width:3.6rem;
+  height:1.12rem;
+  background:rgba(0,0,0,0.7);
+  border-radius:0.16rem;
+  text-align: center;
+  line-height: 1.12rem;
+  font-size:0.32rem;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  position: absolute;
+  top:2.52rem;
+  left:1.96rem;
+}
+.LogincodeTost{
+  width:3.6rem;
+  height:1.12rem;
+  background:rgba(0,0,0,0.7);
+  border-radius:0.16rem;
+  text-align: center;
+  line-height: 1.12rem;
+  font-size:0.32rem;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  position: absolute;
+  top:2.52rem;
+  left:1.96rem;
+}
+.LogincodeErro{
+  width:3.6rem;
+  height:1.64rem;
+  background:rgba(0,0,0,0.7);
+  border-radius:0.16rem;
+  /* text-align: center; */
+  /* line-height: 1.64rem; */
+
+  position: absolute;
+  top:2.52rem;
+  left:1.96rem;
+}
+.LogincodeErro>p{
+  width:3.2rem;
+  height:1.04rem;
+  margin: 0.5rem auto;
+  font-size:0.32rem;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  text-align: center;
+}
+.LoginPhoneErro{
+  width:3.6rem;
+  height:1.64rem;
+  background:rgba(0,0,0,0.7);
+  border-radius:0.16rem;
+  /* text-align: center; */
+  /* line-height: 1.64rem; */
+
+  position: absolute;
+  top:2.52rem;
+  left:1.96rem;
+}
+.LoginPhoneErro>p{
+  width:3.2rem;
+  height:1.04rem;
+  margin: 0.5rem auto;
+  font-size:0.32rem;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  text-align: center;
+}
+.LoginPhoneEmpty{
+  width:3.6rem;
+  height:1.12rem;
+  background:rgba(0,0,0,0.7);
+  border-radius:0.16rem;
+  text-align: center;
+  line-height: 1.12rem;
+  font-size:0.32rem;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  position: absolute;
+  top:2.52rem;
+  left:1.96rem;
+}

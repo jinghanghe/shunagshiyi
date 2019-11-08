@@ -1,5 +1,35 @@
    <template>
         <div class="PaymentMain">
+              <div class="Oral" >
+                <div></div>
+                <div>鲸小爱口语课</div>
+                <div>{{Oridays}}天</div>
+                <div>￥{{Oriprice}}</div>
+              </div>
+              <div class="Prepare" >
+                <div></div>
+                <div>雅思备考计划</div>
+                <div>{{Prodays}}天</div>
+                <div>￥{{Proprice}}</div>
+              </div>
+              <div class="dry" >
+                <div></div>
+                <div>雅思模考</div>
+                <div>{{IELTSTNumber}}个</div>
+                <div>￥{{IELTSTPrice}}</div>
+              </div>
+              <div class="Mask" v-if="maskFlag" >
+                <div>
+                  <div>想了解更多</div>
+                  <div>添加鲸小爱助手查询把</div>
+                  <div>点击复制【18611575192】</div>
+                  <div>微信中搜索小助手了解更多详情</div>
+                  <div>点击复制微信号</div>
+                  <div>重新支付</div>
+                </div>
+                <span>x</span>
+              </div>
+              
               <div class="selectText" >选择支付方式</div>
               <div class="weixinPay" @click="weixinpay">
                 <div>
@@ -18,13 +48,24 @@
               </div>
               <div class="paybottom" >
                 <div>实付款：</div>
-                <div>￥398元</div>
+                <div>￥{{Discount}}元</div>
                 <div @click="selectPay" >立即购买</div>
+              </div>
+              <div class="LoginPhoneTosts" v-show="this.phoneInfoFlag">
+                  支付成功
+              </div>
+              <div class="shadow" v-if="this.orderNoFlag">
+                <div>
+                  <p>请确认支付是否已完成</p>
+                  <p @click="Paid">已完成支付</p>
+                  <p @click="Unpaid">支付遇到问题，请重新支付</p>
+                </div>
               </div>
         </div>
     </template>
     <script>
         import "./index.css"
+        import { ServerIP, H5IP, isWeiXin, GetQueryString } from "../../common/common";
         export default {
           data() {
             return {
@@ -37,19 +78,70 @@
               OriginalType:"",
               IELTSType:"",
               number:"",
+              maskFlag:false,
+              Prodays:0,
+              Proprice:0,
+              OralEnglishClass:[],
+              Oridays:0,
+              Oriprice:0,
+              Discount:0,
+              IELTSTPrice:0,
+              IELTSTNumber:0,
+              phoneInfoFlag:false,
+              orderNoFlag:false,
             }
           },
+          created(){
+            // fetch("http://jztest.jinghangapps.com:5432/v2/singlesDay/showGoodsPageInfo")
+            // .then((res)=>{
+            //   return res.json()
+            // })
+            // .then((res)=>{
+            //   console.log(res);
+            //   this.OralEnglishClass=res.data.goodsArr;
+            //   console.log(this.OralEnglishClass);
+            // })
+          },
           mounted(){
-        
+            this.IELTSTPrice = localStorage.getItem("number") * localStorage.getItem("UnitPrice")
+            this.IELTSTNumber = localStorage.getItem("number")
+            this.Discount = GetQueryString("Discount")
             if(localStorage.getItem("ProType")==""){
                 
             }else{
               this.ProType = localStorage.getItem("ProType");
+              if(localStorage.getItem("ProType")== 4 ){
+                this.Prodays=7
+                this.Proprice = localStorage.getItem("Proprice")
+              }else if(localStorage.getItem("ProType")== 5 ){
+                this.Prodays = 14
+                this.Proprice = localStorage.getItem("Proprice")
+              }else if(localStorage.getItem("ProType")== 6){
+                this.Prodays = 30;
+                this.Proprice = localStorage.getItem("Proprice")
+              }else if(localStorage.getItem("ProType")== 7){
+                this.Prodays = 60;
+                this.Proprice = localStorage.getItem("Proprice")
+              }else if(localStorage.getItem("ProType")== 8){
+                this.Prodays = 90;
+                this.Proprice = localStorage.getItem("Proprice")
+              }
             };
             if(localStorage.getItem("OriginalType")==""){
 
             }else{
+              
               this.OriginalType = localStorage.getItem("OriginalType");
+              if(localStorage.getItem("OriginalType")== 1 ){
+                this.Oridays=30
+                this.Oriprice = localStorage.getItem("Oriprice")
+              }else if(localStorage.getItem("OriginalType")== 2 ){
+                this.Oridays = 180
+                this.Oriprice = localStorage.getItem("Oriprice")
+              }else if(localStorage.getItem("OriginalType")== 3){
+                this.Oridays = 360;
+                this.Oriprice = localStorage.getItem("Oriprice")
+              }
             };
             if(localStorage.getItem("IELTSType")==""){
 
@@ -61,10 +153,17 @@
             }else{
               this.number = localStorage.getItem("number");
             }
-            console.log( this.ProType)
+            if (!isWeiXin()) {
+              if (localStorage.getItem("orderNo") != null) {
+                this.orderNoFlag = true;
+              }
+            } else {
+              this.showFlag = false;
+            }
           },
           methods:{
             selectPay(){
+              
               if(this.weipayFlag){
                   alert("微信")
                   this.tenpay()
@@ -72,12 +171,31 @@
                   alert("支付宝")
                   this.ailipay()
               }else if(this.isWeiXin()){
+                  this.showFlag=false
                   this.jsapipay()
               }
-
             },
-            jsapipay(){
-
+            jsapipay(){ //微信公众号支付
+                this.code = GetQueryString("code");
+                let data = new FormData();
+                data.append("payType", GetQueryString("paytype"));
+                data.append("type", 0);
+                fetch(ServerIP + "v2/wxH5Helper/jsAPIPay", {
+                  method: "post",
+                  body: data,
+                  mode: "cors",
+                  headers: {
+                    "authorization":"Bearer "+localStorage.getItem("token"),
+                  }
+                }).then((res)=>{
+                    return res.json()
+                }).then((res)=>{  
+                    console.log(res)
+                    if(res.code == 200){
+                      localStorage.setItem("orderNo", res.data.orderNo);
+                      this.callWxPay(res.data);
+                    }
+                })
             },
             weixinpay(){
                 this.weipayFlag = true;
@@ -88,29 +206,34 @@
                 this.weipayFlag = false;
             },
 
-            ailipay(){
+            ailipay(){ //支付宝支付
               let data = new FormData();
-              
               var ProType = this.ProType;
               var OriginalType = this.OriginalType;
               var IELTSType = this.IELTSType;
               var number = this.number;
               let obj = {}
-              obj[ProType]=1;
-              obj[OriginalType]=1;
-              obj[IELTSType]=number;
-              data.append('payType',31);
+              if(ProType){
+                obj[ProType]=1;
+              }
+              if(OriginalType){
+                obj[OriginalType]=1;
+              }
+              if(IELTSType){
+                obj[IELTSType]=number;
+              }
+              data.append('payType',GetQueryString("paytype"));
               data.append('type',0);
               var goodsGroupInfo = JSON.stringify(obj)
               data.append("goodsGroupInfo",goodsGroupInfo);
               let redirecturi = "http://" + window.location.host+"/spell";
               data.append("returnUrl",redirecturi)
-              fetch("http://jztest.jinghangapps.com:5432/v2/aliH5Helper/h5Pay",{
+              fetch(ServerIP+"v2/aliH5Helper/h5Pay",{
                 method:"post",
                 body:data,
                 mode:"cors",
                 headers:{
-                    "authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6IjE1ODU2ODk1Njg5IiwiaWQiOjk0NSwiaWF0IjoxNTczMTEwNzUyLCJleHAiOjE1NzU3MDI3NTJ9.wQSWevNRcH_u-AEwB1FGgWngXklJbtzzUPPlHgeekqc",
+                    "authorization":"Bearer "+localStorage.getItem("token"),
                  }            
               }).then((res)=>{
                 return res.json()
@@ -118,21 +241,28 @@
                 location.href=res.data.url;
               })
             },
-            tenpay(){
+            tenpay(){ //h5支付
               let data = new FormData();
               var obj = {}
               var ProType = this.ProType;
               var OriginalType = this.OriginalType;
               var IELTSType = this.IELTSType;
               var number = this.number;
-              obj[ProType]=1;
-              obj[OriginalType]=1;
-              obj[IELTSType]=number;
-              data.append('payType',31);
+              if(ProType){
+                obj[ProType]=1;
+              }
+              if(OriginalType){
+                obj[OriginalType]=1;
+              }
+              if(IELTSType){
+                obj[IELTSType]=number;
+              }
+              
+              data.append('payType',GetQueryString("paytype"));
               data.append('type',0);
               var goodsGroupInfo = JSON.stringify(obj)
               data.append("goodsGroupInfo",goodsGroupInfo);
-              fetch("http://jztest.jinghangapps.com:5432/v2/wxH5Helper/h5Pay",{
+              fetch(ServerIP+"v2/wxH5Helper/h5Pay",{
                 method:"post",
                 body:data,
                 mode:"cors",
@@ -146,7 +276,6 @@
                   var url = "http://" + window.location.host+"/spell";
                   url = encodeURIComponent(url);
                   location.href=res.data.mweb_url + "&redirect_url=" + url;
-
               })
             },
             isWeiXin() {
@@ -154,6 +283,77 @@
                 let ua = window.navigator.userAgent.toLowerCase();
                 return ua.match(/MicroMessenger/i) == "micromessenger";
             },
+            jsApiCall(params) {
+                  var _this = this;
+                  let m = "MD5";
+                  let stringA = `appId=${params.appId}&nonceStr=${params.nonceStr}&package=prepay_id=${params.prepayid}&signType=${m}&timeStamp=${params.timeStamp}`;
+                  let stringSignTemp = stringA + "&key=jinghangjinghangjinghang20182019";
+                  let sign = md5(stringSignTemp).toUpperCase();
+                  WeixinJSBridge.invoke(
+                    "getBrandWCPayRequest",
+                    {
+                      appId: params.appId,
+                      timeStamp: params.timeStamp,
+                      nonceStr: params.nonceStr,
+                      package: params.package,
+                      signType: "MD5",
+                      paySign: params.paySign
+                    },
+                    function(res) {
+                      if (res.err_msg === "get_brand_wcpay_request:ok") {
+                        window.location.href="/act"
+                      } else if (res.err_msg === "get_brand_wcpay_request:cancel") {
+                        localStorage.removeItem("orderNo");
+                        _this.maskFlag=true
+                      } else if (res.err_msg === "get_brand_wcpay_request:fail") {
+                        localStorage.removeItem("orderNo");
+                      }
+                    }
+                  );
+                },
+            // 公众号支付监听 否则无法调动支付控件;
+            callWxPay(params) {
+              if (typeof WeixinJSBridge == "undefined") {
+                if (document.addEventListener) {
+                  document.addEventListener(
+                    "WeixinJSBridgeReady",
+                    this.jsApiCall(params),
+                    false
+                  );
+                } else if (document.attachEvent) {
+                  document.attachEvent("WeixinJSBridgeReady", this.jsApiCall(params));
+                  document.attachEvent("onWeixinJSBridgeReady", this.jsApiCall(params));
+                }
+              } else {
+                this.jsApiCall(params);
+              }
+            },
+            Paid(){
+             this.orderNoFlag = false;
+             this.Whether();         
+            },
+            Unpaid(){
+             this.orderNoFlag = false;
+             this.Whether(); 
+            },
+                //判断是否支付成功
+                Whether() {
+                  // let data = new FormData();
+                  // data.append("orderNo", localStorage.getItem("orderNo"));
+                  // fetch(ServerIP + "v2/curriculums/queryPayResult", {
+                  //   method: "post",
+                  //   body: data,
+                  //   mode: "cors",
+                  //   headers: {
+                  //     authorization: "Bearer " + localStorage.getItem("token")
+                  //   }
+                  // })
+                  //   .then(res => {
+                  //     return res.json();
+                  //   })
+                  //   .then(res => {
+                  //   });
+                }
           },
 
         }

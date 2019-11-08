@@ -1,6 +1,7 @@
 
  .PaymentMain{
    overflow: hidden;
+   height:100%;
  }
  .selectText{
   width:1.92rem;
@@ -159,4 +160,356 @@
   line-height: 0.96rem;
   
   margin-top: 0.2rem;
+}
+.Oral{
+  width:6.86rem;
+  height:1.6rem;
+  background:rgba(245,248,252,1);
+  border-radius:0.16rem;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+  position: relative;
+  margin-top:0.4rem; 
+}
+.Oral>div:nth-child(1){
+  position: absolute;
+  left:0.2rem;
+  top:0.2rem;
+  width:0.92rem;
+  height:1.2rem;
+  background:rgba(216,216,216,1);
+  border-radius:0.06rem;
+  background-image: url("../../static/口语课@3x.png");
+  background-size: 100% 100%;
+}
+.Oral>div:nth-child(2){
+  position: absolute;
+  left:1.32rem;
+  top:0.2rem;
+  width:1.92rem;
+  height:0.44rem;
+  font-size:0.32rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+  line-height:0.44rem;
+}
+.Oral>div:nth-child(3){
+  position: absolute;
+  left:1.32rem;
+  top:0.71rem;
+  width:0.84rem;
+  height:0.34rem;
+  font-size:0.24rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(128,128,128,1);
+  line-height:0.34rem;
+}
+.Oral>div:nth-child(4){
+  position: absolute;
+  right:0.2rem;
+  bottom:0.58rem;
+  width:0.72rem;
+  height:0.44rem;
+  font-size:0.32rem;
+  font-family:PingFangSC-Semibold,PingFang SC;
+  font-weight:600;
+  color:rgba(255,102,108,1);
+  line-height:0.44rem;
+}
+
+
+.Prepare{
+
+}
+.Prepare{
+  width:6.86rem;
+  height:1.6rem;
+  background:rgba(245,248,252,1);
+  border-radius:0.16rem;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+  position: relative;
+}
+.Prepare>div:nth-child(1){
+  position: absolute;
+  left:0.2rem;
+  top:0.2rem;
+  width:0.92rem;
+  height:1.2rem;
+  background:rgba(216,216,216,1);
+  border-radius:0.06rem;
+  background-image: url("../../static/备考计划@3x.png");
+  background-size: 100% 100%;
+}
+.Prepare>div:nth-child(2){
+  position: absolute;
+  left:1.32rem;
+  top:0.2rem;
+  width:1.92rem;
+  height:0.44rem;
+  font-size:0.32rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+  line-height:0.44rem;
+}
+.Prepare>div:nth-child(3){
+  position: absolute;
+  left:1.32rem;
+  top:0.71rem;
+  width:0.54rem;
+  height:0.34rem;
+  font-size:0.24rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(128,128,128,1);
+  line-height:0.34rem;
+}
+.Prepare>div:nth-child(4){
+  position: absolute;
+  right:0.2rem;
+  bottom:0.58rem;
+  width:0.72rem;
+  height:0.44rem;
+  font-size:0.32rem;
+  font-family:PingFangSC-Semibold,PingFang SC;
+  font-weight:600;
+  color:rgba(255,102,108,1);
+  line-height:0.44rem;
+}
+.dry{
+
+}
+.dry{
+  width:6.86rem;
+  height:1.6rem;
+  background:rgba(245,248,252,1);
+  border-radius:0.16rem;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+  position: relative;
+  margin-bottom: 0.6rem;
+}
+.dry>div:nth-child(1){
+  position: absolute;
+  left:0.2rem;
+  top:0.2rem;
+  width:0.92rem;
+  height:1.2rem;
+  background:rgba(216,216,216,1);
+  border-radius:0.06rem;
+  background-image: url("../../static/雅思模考@3x.png");
+  background-size: 100% 100%;
+}
+.dry>div:nth-child(2){
+  position: absolute;
+  left:1.32rem;
+  top:0.2rem;
+  width:1.92rem;
+  height:0.44rem;
+  font-size:0.32rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+  line-height:0.44rem;
+}
+.dry>div:nth-child(3){
+  position: absolute;
+  left:1.32rem;
+  top:0.71rem;
+  width:0.54rem;
+  height:0.34rem;
+  font-size:0.24rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(128,128,128,1);
+  line-height:0.34rem;
+}
+.dry>div:nth-child(4){
+  position: absolute;
+  right:0.2rem;
+  bottom:0.58rem;
+  width:0.72rem;
+  height:0.44rem;
+  font-size:0.32rem;
+  font-family:PingFangSC-Semibold,PingFang SC;
+  font-weight:600;
+  color:rgba(255,102,108,1);
+  line-height:0.44rem;
+  /* margin-top: 0.6rem; */
+}
+html,body{
+  height:100%;
+ }
+.Mask{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.4);
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: 10;
+}
+.Mask>div{
+  width:6.32rem;
+  height:7.9rem;
+  background:rgba(255,255,255,1);
+  border-radius:0.16rem;
+  margin:0 auto;
+  margin-top: 2.4rem;
+  overflow: hidden;
+  position: relative;
+}
+.Mask>div>div:nth-child(1){
+  font-size: 0.4rem;
+  font-family:PingFangSC-Semibold,PingFang SC;
+  font-weight:600;
+  color:rgba(65,65,65,1);
+  line-height:0.56rem;
+  text-align: center;
+  height:0.56rem;
+  margin-top: 1rem;
+}
+.Mask>div>div:nth-child(2){
+  font-size: 0.4rem;
+  font-family:PingFangSC-Semibold,PingFang SC;
+  font-weight:600;
+  color:rgba(65,65,65,1);
+  line-height:0.56rem;
+  text-align: center;
+  
+}
+
+.Mask>div>div:nth-child(3){
+  font-size:0.36rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(65,65,65,1);
+  line-height:0.5rem;
+  text-align: center;
+  height:0.5rem; 
+  margin-top: 0.76rem;
+  
+}
+.Mask>div>div:nth-child(4){
+  font-size:0.36rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(65,65,65,1);
+  line-height:0.5rem;
+  text-align: center;
+  height:0.5rem; 
+  
+}
+.Mask>div>div:nth-child(5){
+  width:4.56rem;
+  height:1rem;
+  background:rgba(54,165,68,1);
+  border-radius:0.6rem;
+  font-size:0.36rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 1rem;
+  margin:0 auto;
+  margin-top: 0.6rem;
+}
+.Mask>div>div:nth-child(6){
+  width:4.56rem;
+  
+  height:1rem;
+  border-radius:30px;
+  border:1px solid rgba(124,124,124,1);
+  margin:0 auto;
+  text-align: center;
+  line-height: 1rem;
+  font-size:0.36rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(81,81,81,1);
+  margin-top: 0.4rem;
+}
+.Mask>span{
+  width:0.72rem;
+  height:0.72rem;
+  border:0.04rem solid rgba(255,255,255,1);
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 0.48rem;
+  text-align: center;
+  line-height: 0.72rem;
+  color: #FFFFFF;
+  margin:0 auto;
+  margin-top: 0.4rem;
+  transform: translateX(-50%);
+  margin-left:50%
+}
+
+.LoginPhoneTosts{
+  width:3.6rem;
+  height:1.12rem;
+  background:rgba(0,0,0,0.7);
+  border-radius:0.16rem;
+  text-align: center;
+  line-height: 1.12rem;
+  font-size:0.32rem;
+  font-family:PingFangSC-Regular,PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  position: absolute;
+  top:5.5rem;
+  left:1.96rem;
+}
+
+.shadow{
+  width:100%;
+  height:100%;
+  background-color: rgba(128,128,128,0.7);
+  position:fixed;
+  left:0;
+  top:0;
+  z-index: 5;
+}
+.shadow>div{
+  width:5.66rem;
+  height:4.24rem;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 0.04rem 0.3rem 0px rgba(0,0,0,0.12);
+  border-radius:0.24rem;
+  margin: 3.5rem auto;
+}
+.shadow>div>p:nth-child(1){
+  height:1.8rem;
+  text-align: center;
+  font-size:0.36rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  line-height:1.8rem;
+  border-bottom:0.01rem solid #999999 ;
+}
+.shadow>div>p:nth-child(2){
+  height:1.26rem;
+  text-align: center;
+  font-size:0.36rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  line-height:1.26rem;
+  border-bottom:0.01rem solid #999999 ;
+  color:rgba(255,102,108,1);
+ 
+}
+.shadow>div>p:nth-child(3){
+  height:0.98rem;
+  text-align: center;
+  font-size:0.36rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(81,81,81,1);
+  line-height:1.15rem;
+  
 }

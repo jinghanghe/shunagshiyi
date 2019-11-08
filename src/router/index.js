@@ -4,6 +4,8 @@ import IndexHome from "../views/indexHome"
 import Spell from "../views/spell"
 import Assemble from "../views/Assemble"
 import Payment from "../views/payment"
+import Login from "../views/Login"
+import Activation from "../views/activation"
 // import axios from 'axios';
 // var vm = new Vue({el:"#index"});
 // Vue.prototype.$httpAxios = axios;
@@ -12,11 +14,22 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-  
     {
       path: '/',
       name: 'indexhome',
       component: IndexHome,
+
+    },
+    {
+      path: '/act',
+      name: 'Activation',
+      component: Activation,
+
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
 
     },  
     {
@@ -27,7 +40,7 @@ export default new Router({
     },
     {
       path: '/ass',
-      name: 'spell',
+      name: 'Assemble',
       component: Assemble,
 
     },

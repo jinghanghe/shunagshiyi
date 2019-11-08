@@ -83,10 +83,15 @@
               </div>
               <div @click="pay">去支付</div>
             </div>
+
+            <div class="LoginPhoneTosts" v-show="this.phoneInfoFlag">
+                  请选择商品支付
+            </div>
         </div>
     </template>
     <script>
         import "./index.css"
+        import { ServerIP, H5IP, isWeiXin, GetQueryString } from "../../common/common";
         export default {
           data() {
             return {
@@ -123,11 +128,14 @@
               ProType:"",//雅思备考计划
               IELTSType:"", //雅思模考
               OriginalType:"",//口语课
+              UnitPrice:"",//单价
+              shoppay:"",
+              phoneInfoFlag:false
 
             }
           },
           mounted(){
-            fetch("http://jztest.jinghangapps.com:5432/v2/singlesDay/showGoodsPageInfo")
+            fetch(ServerIP+"v2/singlesDay/showGoodsPageInfo")
             .then((res)=>{
               return res.json()
             })
@@ -135,6 +143,7 @@
               console.log(res);
               this.OralEnglishClass=res.data.goodsArr;
               console.log(this.OralEnglishClass);
+              this.shoppay = res.data.goodsGroup.payType
             })
           },
           methods:{
@@ -207,6 +216,7 @@
               this.TotalPrice=this.OriginalPrice + this.ProOriginalPrice+this.IELTSOriginalPrice;
               this.Discount=this.PresentPrice + this.ProPresentPrice+this.IELTSPresentPrice;
               this.IELTSType=this.OralEnglishClass[3].payType;
+              this.UnitPrice = this.OralEnglishClass[3].currentPrice;
             },
             add(){
               this.number++;
@@ -217,45 +227,40 @@
               this.Discount=this.PresentPrice + this.ProPresentPrice+this.IELTSPresentPrice;
               this.IELTSType = this.OralEnglishClass[3].payType;
               this.IELTSType=this.OralEnglishClass[3].payType;
+              this.UnitPrice = this.OralEnglishClass[3].currentPrice;
             },
             pay(){
-
-              // console.log(this.ProType)
-              // console.log(this.OriginalType)
-              // console.log(this.IELTSType)
-              localStorage.setItem("ProType",this.ProType)
-              localStorage.setItem("OriginalType",this.OriginalType)
-              localStorage.setItem("IELTSType",this.IELTSType)
-              localStorage.setItem("number",this.number)
-              this.$router.push("/payment")
-              // let data = new FormData();
-              // var obj = {22:1,25:2,26:1}
-              // data.append('payType',31);
-              // data.append('type',0);
-              // var goodsGroupInfo = JSON.stringify(obj)
-              // data.append("goodsGroupInfo",goodsGroupInfo);
-              // let redirecturi = "http://" + window.location.host+"/spell";
-              // // data.append("returnUrl",redirecturi)
-              // fetch("http://jztest.jinghangapps.com:5432/v2/wxH5Helper/h5Pay",{
-              //   method:"post",
-              //   body:data,
-              //   mode:"cors",
-              //   headers:{
-              //       "authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6IjE1ODU2ODk1Njg5IiwiaWQiOjk0NSwiaWF0IjoxNTczMTEwNzUyLCJleHAiOjE1NzU3MDI3NTJ9.wQSWevNRcH_u-AEwB1FGgWngXklJbtzzUPPlHgeekqc",
-              //    }            
-              // }).then((res)=>{
-              //   return res.json()
-              // }).then((res)=>{
-              //     console.log(res)
-              //     var url = "http://" + window.location.host+"/spell";
-              //     url = encodeURIComponent(url);
-              //     location.href=res.data.mweb_url + "&redirect_url=" + url;
-              //   // location.href=res.data.url;
-              // })
+              if(this.PresentPrice==0&&this.ProPresentPrice==0&&this.IELTSPresentPrice==0){
+                 this.phoneInfoFlag=true
+                 setTimeout(() => {
+                 this.phoneInfoFlag = false;
+                  }, 2000);
+              }else{
+                localStorage.setItem("ProType",this.ProType)
+                localStorage.setItem("OriginalType",this.OriginalType)
+                localStorage.setItem("IELTSType",this.IELTSType)
+                localStorage.setItem("number",this.number)
+                localStorage.setItem("Proprice",this.ProPresentPrice)
+                localStorage.setItem("Oriprice",this.PresentPrice)
+                localStorage.setItem("IELTSprice",this.IELTSPresentPrice)
+                localStorage.setItem("UnitPrice",this.UnitPrice)
+                // this.$router.push("/payment")
+                if(localStorage.getItem("token")) {
+                  
+                  if(isWeiXin()) {
+                    let uurrll = encodeURIComponent("http://jztest.jinghangapps.com/payment?paytype="+this.shoppay+"&Discount="+this.Discount);
+                    location.replace("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx406146b030189d06&redirect_uri=" + uurrll + "&response_type=code&scope=snsapi_base&#wechat_redirect");
+                  } else {
+                    window.location.href = "/payment?paytype="+this.shoppay+"&Discount=" + this.Discount ;
+                    // this.$router.push("/payment?31/" + this.TotalPrice)
+                  }
+                } else {
+                  window.location.href = "/login?paytype="+this.shoppay+"&Discount=" + this.Discount ;
+                  // this.$router.push("/login?31/"+ this.Discount)
+                }
+              } 
             }
-          
           },
-
         }
           
           
