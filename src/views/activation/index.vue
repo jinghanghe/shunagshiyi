@@ -9,13 +9,15 @@
             <div>语”App使用。扫码添加客服微信</div>
             <div>(18611575192)，我们将赠送您一</div>
             <div>份“英语学习大礼包”。</div>
-            <div @click="handlerclick">点击复制微信号</div>
-             <span data-clipboard-action="copy" class="cobyOrderSn" :data-clipboard-text="1861157" @click="handlerclick">1861157</span>
+            <div id="add" @click="handlerclick">点击复制微信号</div>
+            <div id="code"   :style="{opacity:'0'}" className="copycode" >18611575192</div>
+            
         </div>
     </template>
     <script>
         import "./index.css";
-        // import Clipboard from 'clipboard';
+        // import {handleClipboard} from '../../assets/js/clipboard' 
+        import Clipboard from 'clipboard';
         export default {
           data() {
             return {
@@ -28,16 +30,48 @@
           },
           methods:{
             handlerclick(){
-               let _this = this;
-                let clipboard = new this.clipboard(".cobyOrderSn");
-         
-                clipboard.on('success', function () {
-                
-                });
-                clipboard.on('error', function () {
-               
-                });
+
+                this.copy("code")
             },
+           
+             copy (id, attr) 
+  {
+    let target = null;
+    
+    if (attr) {
+      target = document.createElement("div");
+      target.id = "tempTarget";
+      target.style.opacity = "0";
+      if (id) {
+      let curNode = document.querySelector("#" + id);
+      target.innerText = curNode[attr];
+      } else {
+      target.innerText = attr;
+      }
+      document.body.appendChild(target);
+    } else {
+      target = document.querySelector("#" + id);
+    }
+    
+    try {
+    let range = document.createRange();
+    range.selectNode(target);
+    console.log(range)
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    console.log("复制成功")
+    } catch (e) {
+    console.log("复制失败")
+    }
+    
+    if (attr) {
+    // remove temp target
+    target.parentElement.removeChild(target);
+    }
+    }
+            
           },
 
         }

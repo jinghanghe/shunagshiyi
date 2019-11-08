@@ -21,7 +21,7 @@
               <div class="Mask" v-if="maskFlag" >
                 <div>
                   <div>想了解更多</div>
-                  <div>添加鲸小爱助手查询把</div>
+                  <div>添加鲸小爱助手查询吧</div>
                   <div>点击复制【18611575192】</div>
                   <div>微信中搜索小助手了解更多详情</div>
                   <div>点击复制微信号</div>

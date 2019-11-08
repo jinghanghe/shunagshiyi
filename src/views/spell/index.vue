@@ -68,7 +68,6 @@
                   <span>￥{{IELTSPresentPrice}}</span>
                 </div>
                 <div>
-                  <span>{{IELTSaveragePerDay}}</span>
                 </div>
               </div>
             </div>

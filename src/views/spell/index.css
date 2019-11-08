@@ -3,6 +3,7 @@
   height:100%;
   background:rgba(247,247,247,1);
   overflow: hidden;
+  overflow: auto;
 }
 .language{
   width:6.88rem;
@@ -284,6 +285,7 @@ select::-ms-expand { display: none; }
   margin: 0 auto;
   margin-top: 0.32rem;
   display: flex;
+  margin-bottom: 1.5rem;;
 }
 .IELTSodeTestImg{
   width:2rem;

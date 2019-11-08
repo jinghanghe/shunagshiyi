@@ -81,6 +81,7 @@
   height:4.44rem;
   background-image: url("../../static/详情14@3x.png");
   background-size: 100% 100%;
+  margin-bottom:2.3rem;
 }
 .bottom{
   width:100%;
@@ -100,6 +101,8 @@
   margin-left: 50%;
   transform:translateX(-50%);
   margin-top: 0.42rem;
+  font-weight: 800;
+  font-family:PingFangSC-Medium,PingFang SC;
   /* transform:translateY(50%) */
 }
 .curriculum{
