@@ -155,7 +155,7 @@
               this.number = localStorage.getItem("number");
             }
             if (!isWeiXin()) {
-              if (localStorage.getItem("orderNo") != null && GetQueryString("spell")==1) {
+              if (localStorage.getItem("orderNo")) {
                 this.orderNoFlag = true;
               }
             } else {
@@ -382,8 +382,11 @@
                     })
                     .then(res => {
                         if(res.data.trade_state == "SUCCESS"){
+                          localStorage.removeItem("orderNo")
                           window.location.href = H5IP+"/act"
+                          
                         }else if(res.data.trade_state == "NOTPAY"){
+                           localStorage.removeItem("orderNo")
                            window.location.href = H5IP+"/payment"+window.location.search
                         }
                     });
