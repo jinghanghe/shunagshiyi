@@ -267,7 +267,7 @@
                 body:data,
                 mode:"cors",
                 headers:{
-                    "authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6IjE1ODU2ODk1Njg5IiwiaWQiOjk0NSwiaWF0IjoxNTczMTEwNzUyLCJleHAiOjE1NzU3MDI3NTJ9.wQSWevNRcH_u-AEwB1FGgWngXklJbtzzUPPlHgeekqc",
+                    "authorization":"Bearer "+localStorage.getItem("token"),
                  }            
               }).then((res)=>{
                 return res.json()
