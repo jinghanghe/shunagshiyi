@@ -341,7 +341,7 @@
                     function(res) {
                     
                       if (res.err_msg === "get_brand_wcpay_request:ok") {
-                        window.location.href=href+"/act"
+                        window.location.href=H5IP+"act"
                       } else if (res.err_msg === "get_brand_wcpay_request:cancel") {
                         localStorage.removeItem("orderNo");
                         _this.maskFlag=true
