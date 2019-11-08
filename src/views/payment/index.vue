@@ -166,13 +166,16 @@
               
               if(this.weipayFlag){
                   alert("微信")
-                  this.tenpay()
+                  
+                  if(isWeiXin()){
+                    this.showFlag=false
+                  this.jsapipay()
+                  }else{
+                    this.tenpay()
+                  }
               }else if(this.zhifupayFlag){
                   alert("支付宝")
                   this.ailipay()
-              }else if(isWeiXin()){
-                  this.showFlag=false
-                  this.jsapipay()
               }
             },
             jsapipay(){ //微信公众号支付
