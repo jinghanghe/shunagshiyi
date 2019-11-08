@@ -155,7 +155,7 @@
               this.number = localStorage.getItem("number");
             }
             if (!isWeiXin()) {
-              if (localStorage.getItem("orderNo") != null) {
+              if (localStorage.getItem("orderNo") != null && GetQueryString("spell")==1) {
                 this.orderNoFlag = true;
               }
             } else {
@@ -249,7 +249,7 @@
               data.append('type',0);
               var goodsGroupInfo = JSON.stringify(obj)
               data.append("goodsGroupInfo",goodsGroupInfo);
-              let redirecturi = "http://" + window.location.host+"/payment"+window.location.search;
+              let redirecturi = "http://" + window.location.host+"/payment"+window.location.search+"spell=1";
               data.append("returnUrl",redirecturi)
               fetch(ServerIP+"v2/aliH5Helper/h5Pay",{
                 method:"post",
@@ -298,7 +298,7 @@
               }).then((res)=>{
                   console.log(res)
                   localStorage.setItem("orderNo", res.data.orderNo);
-                  var url = "http://" + window.location.host+"/payment"+window.location.search;
+                  var url = "http://" + window.location.host+"/payment"+window.location.search+"spell=1";
                   url = encodeURIComponent(url);
                   location.href=res.data.mweb_url + "&redirect_url=" + url;
               })
