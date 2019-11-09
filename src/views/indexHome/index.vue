@@ -35,6 +35,7 @@
     </template>
     <script>
         import "./index.css"
+        import { ServerIP, H5IP, isWeiXin, GetQueryString } from "../../common/common";
         export default {
           data() {
             return {
@@ -43,7 +44,9 @@
             }
           },
           mounted(){
-        
+            if(GetQueryString("token")){
+                localStorage.setItem("token",GetQueryString("token"))
+              }
           },
           methods:{
             handlerspell(){
