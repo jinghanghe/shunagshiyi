@@ -14,6 +14,7 @@
           <div class="Img12"></div>
           <div class="Img13"></div>
           <div class="Img14"></div>
+          <div class="Img15"></div>
           <div class="bottom">
             <div class="curriculum"> 
               <div>
