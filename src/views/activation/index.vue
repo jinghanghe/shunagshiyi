@@ -29,7 +29,7 @@
             }
           },
           mounted(){
-        
+            sensors.quick('autoTrack');
           },
           methods:{
             handlerclick(){

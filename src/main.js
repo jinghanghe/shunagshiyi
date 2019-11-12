@@ -17,7 +17,29 @@ Vue.prototype.clipboard = clipboard;
 import 'swiper/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
+const sensors = require('sa-sdk-javascript/sensorsdata.min.js');
 
+sensors.init({
+  server_url: 'https://jinghangapps.datasink.sensorsdata.cn/sa?project=production&token=3847889d9f7d7480',
+  heatmap: {
+     //是否开启点击图，默认 default 表示开启，自动采集 $WebClick 事件，可以设置 'not_collect' 表示关闭
+     //需要 JSSDK 版本号大于 1.7
+     clickmap:'default',
+     //是否开启触达注意力图，默认 default 表示开启，自动采集 $WebStay 事件，可以设置 'not_collect' 表示关闭
+     //需要 JSSDK 版本号大于 1.9.1
+     scroll_notice_map:'not_collect'
+  }
+});
+// sensors.login(user_id);
+
+router.beforeEach(function (to,from,next){
+  setTimeout(function (){
+    next();
+    // sensors.quick("autoTrackSinglePage"); // after the next(); statement
+    
+    sensors.quick('autoTrack');
+  },0);
+});
 new Vue({
   router,
   store,

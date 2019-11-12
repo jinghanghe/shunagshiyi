@@ -47,7 +47,7 @@
           mounted(){
             if(GetQueryString("token")){
                 localStorage.setItem("token",GetQueryString("token"))
-              }
+            }
           },
           methods:{
             handlerspell(){
